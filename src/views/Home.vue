@@ -1235,15 +1235,19 @@ let dis_rating = (rating)=>{
       <div :class="`all all`+all">
 
 
-      <imgH :label="header_label" />
+      <imgH class="max" :label="header_label" />
+      
+      <div class="imgh2 min">
 
-      <div class="disc_cont">
+      </div>
+
+      <div class="max disc_cont">
         <div :class="`disc disc-`+all">discount by <span> 60% </span> when you buy more than 3 items</div>
         </div>
 
       <div class="fixed-cont">
 
-      <div class="grid-header">
+      <div class="max grid-header">
 
       <div :class="`filter-text-h filter-color-`+circle_theme">
         viewing 18 item of 200
@@ -1253,7 +1257,7 @@ let dis_rating = (rating)=>{
     </div>
   
 
-        <div :class="`side-`+side_theme+` side`">
+        <div :class="`max side-`+side_theme+` side`">
        <div :class="`fliters-fiters filter-color-`+circle_theme"> 
         Fliters & Sort
       </div>
@@ -1316,7 +1320,7 @@ let dis_rating = (rating)=>{
 
 
 
-<div :class="background+` con-flex`">
+<div :class="background+`  con-flex`">
 
 
 
