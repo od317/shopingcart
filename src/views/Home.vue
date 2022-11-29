@@ -1136,12 +1136,15 @@ let dis_rating = (rating)=>{
 
 
 
-
+      <div :class="`min min-theme min-theme-`+all">
+        <button v-if="!dark" class="theme-button theme-button1" @click="change_dark" ><ion-icon name="moon" class="moon"></ion-icon></button>
+        <button v-if="dark" class="theme-button theme-button2" @click="change_light" ><ion-icon name="sunny" class="sun"></ion-icon></button>  
+      </div>
 
 
       <nav :class="nav+` navbar2`">
         <div class="container-fluid">
-            <div class="main-flex2 d-flex justify-content-between">
+            <div :class="`main-flex2 d-flex justify-content-between main-flex2-`+all">
 
               <label   :class="button+` button1 button2`" data-bs-toggle="modal" >
                 <router-link to="main" class="logo_main">
@@ -1231,13 +1234,12 @@ let dis_rating = (rating)=>{
 
 
 
-
       <div :class="`all all`+all">
 
 
       <imgH class="max" :label="header_label" />
       
-      <div class="imgh2 min">
+      <div :class="`imgh2 min imgh2-`+all">
 
       </div>
 
@@ -1317,7 +1319,6 @@ let dis_rating = (rating)=>{
 
 
 </div>
-
 
 
 <div :class="background+`  con-flex`">
