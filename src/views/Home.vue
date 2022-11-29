@@ -1148,9 +1148,30 @@ let dis_rating = (rating)=>{
                 <ion-icon name="bag-handle-outline" class="cart-icon"></ion-icon>
               </router-link>
               </label>
+ 
+
+              <label  @click="tech" :class="button+` button1 button2`" data-bs-toggle="modal" >
+                <label class="logo_main">
+                <ion-icon name="tv" class="cart-icon"></ion-icon>
+              </label>
+              </label>
+ 
+ 
+              <label  @click="fashion" :class="button+` button1 button2`" data-bs-toggle="modal" >
+                <label class="logo_main">
+                <ion-icon name="shirt" class="cart-icon"></ion-icon>
+              </label>
+              </label>
+ 
+              
+              <label  @click="frun" :class="button+` button1 button2`" data-bs-toggle="modal" >
+                <label class="logo_main">
+                <ion-icon name="bed" class="cart-icon"></ion-icon>
+              </label>
+              </label>
+ 
 
               
- 
             
 
            

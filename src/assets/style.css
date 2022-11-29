@@ -23,6 +23,11 @@ body{
   overflow-x:hidden;
 }
 
+.min{
+  display:none;
+}
+
+
 .theme-button .moon{
     color:white;
     border-radius: 50%;
@@ -717,6 +722,12 @@ background-color: var(--dark4);
   body{
     overflow-x: hidden;
   }
+  .min{
+    display: block;
+  }
+  .max{
+    display: none;
+  }
   .navbar{
       display: none;
   }
@@ -724,14 +735,15 @@ background-color: var(--dark4);
   .navbar2{
       display: block;
       background-color:transparent;
-      width: 90vw;
+      width: 100vw;
       display: flex;
-      align-items: center;
+      align-items:flex-end;
       justify-content: center;
-      position: fixed;
-      transform: translateY(110vh);
+      transform:translateY(90vh);
+      position:sticky;
+      top:25vh;
       z-index: 200;
-  }
+    }
 
   .main-flex2{
     background-color:var(--light1);
