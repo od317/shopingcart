@@ -2,7 +2,9 @@ body{
     overflow-x: hidden;
 }
 
-
+.min{
+    display: none;
+}
 
 .main_first{
 position: relative;
@@ -308,4 +310,62 @@ height: 50vh;
 .main-footer-dark  .link:hover{
     color: white;
     background-color: var(--dark1);
+}
+
+
+
+@media only screen and (max-width:690px) {
+
+
+
+.min{
+    display: block;
+}
+
+
+.grid_sec{
+    background-color:transparent;
+    padding:0;
+    width: 100vw;
+    color: black;
+    margin-top: 0;
+    position: relative;
+
+}
+
+.sec_grid_f{
+    position: relative;
+    width: 45%;
+    height: 100%;
+    display: grid;    
+    grid-template-columns:  100%;
+    margin-right: .1rem;
+}
+
+.sec_grid_f .sec_grid_img{
+    position: relative;
+    overflow: hidden;    
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    margin-top: .3rem;    
+}
+
+.sec_grid_f .sec_grid_img img{
+ height: 100%;
+}
+
+.sec_grid_img:hover .card_hov{
+    opacity:0;
+}
+
+.sec_grid_img:hover .card_hov button{
+   display:none;
+}
+
+.sec_grid_img:hover .card_hov label{
+    display:none;
+ }
+
+.max{
+    display: none;
+}
 }

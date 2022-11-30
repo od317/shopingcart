@@ -1321,11 +1321,11 @@ let dis_rating = (rating)=>{
 </div>
 
 
-<div :class="background+`  con-flex`">
+<div :class="background+`  con-flex max`">
 
 
 
-<div class="container">
+<div class=" container">
 
 
        
@@ -1353,6 +1353,46 @@ let dis_rating = (rating)=>{
 
 
 </div>
+
+
+
+
+<div :class="background+`  con-flex-min`">
+
+
+
+  <div class=" container-min">
+  
+  
+         
+          
+          <div v-for="p in pro" :class="card+` card-min`">
+            <img :src="p.img" class="card-img-top" alt=""  />
+            <div v-if="p.date>2020" :class="`card_new card_new_min card_new_`+all">new</div>
+              <div class="card-body card-body-min">
+                <div class="min-card-body-cont">
+                <h5 class="card-title-min">{{p.name}}</h5>
+                <div class="rating">
+                <ion-icon v-for="s in dis_rating(p.rating)" :name="`star`+s" class="star"></ion-icon>
+              </div>
+                <label v-if="p.disc==null" class="card-text-min">price:${{p.price}}</label>
+                <label v-else class="card-text-min">price:<span class="removed_price">${{p.price}}</span><span class="disc_price">${{p.disc}}</span></label>
+              </div>
+                <div class="d-flex flex-row-reverse but-con">
+                <button class="add-butt-min" @click="addi(p)">add to cart</button>
+              </div>
+              </div>
+            </div>
+      
+      
+  
+  </div>
+  
+  
+  </div>
+
+
+
 
 <div class="footer">
 

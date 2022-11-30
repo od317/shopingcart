@@ -188,7 +188,7 @@ token.value = localStorage.getItem('token');
 
 
 
-  <nav :class="nav+` navbar-main navbar-main-`+theme">
+  <nav :class="nav+` max navbar-main navbar-main-`+theme">
     <div class="container-fluid">
         <div class="main-flex d-flex justify-content-center">
 
@@ -232,7 +232,7 @@ token.value = localStorage.getItem('token');
 
 
 
-<div class="main_first">
+<div class="max main_first">
 
     <div id="carouselExampleIndicators" :class="`carousel slide carousel-`+theme" >
      
@@ -296,7 +296,7 @@ token.value = localStorage.getItem('token');
 
 
 
-<div class="main_bf">
+<div class="max main_bf">
   <div :class="`text text2-`+theme">
     <label class="large_text" for="">Black Friday 2022</label><br>
     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae distinctio error dolores explicabo
@@ -327,7 +327,7 @@ token.value = localStorage.getItem('token');
     
   <div v-for="img in grid1" class="sec_grid_img"> 
     <img :src="img.src" alt="">
-    <div  class="d-flex flex-column card_hov">
+    <div  class="max d-flex flex-column card_hov">
      <label class="" for="">see more in {{img.type}}</label>  
      <button>go to sotre</button>
     </div> 
@@ -344,7 +344,7 @@ token.value = localStorage.getItem('token');
 
   <div v-for="img in grid2" class="sec_grid_img"> 
     <img :src="img.src" alt="">
-    <div  class="d-flex flex-column card_hov">
+    <div  class="max d-flex flex-column card_hov">
       <label class="" for="">see more in {{img.type}}</label>  
       <button>go to sotre</button>
      </div> 
@@ -355,7 +355,7 @@ token.value = localStorage.getItem('token');
 
 <!-- 3 -->
 
-<div class="sec_grid_f">
+<div class="sec_grid_f max">
 
 
 
@@ -373,7 +373,7 @@ token.value = localStorage.getItem('token');
 
 <!-- 4 -->
 
-<div class="sec_grid_f">
+<div class="sec_grid_f max">
   
 
 
