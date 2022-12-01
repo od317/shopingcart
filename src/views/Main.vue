@@ -154,6 +154,8 @@ let fashion_but = ref('active');
 let tech_but = ref(' ');
 let furn_but = ref(' ');
 
+let grid_type = ref('f');
+
 let g1 = ref([]);
 g1.value = grid1.filter(a=>a.type==='fashion');
 
@@ -218,6 +220,7 @@ let change_grid = type => {
       fashion_but.value='active';
       tech_but.value='';
       furn_but.value='';
+      grid_type.value = 'f';
       g1.value = grid1.filter(a=>a.type==='fashion');
       g2.value = grid2.filter(a=>a.type==='fashion');
       g3.value = grid3.filter(a=>a.type==='fashion');
@@ -227,6 +230,7 @@ let change_grid = type => {
       tech_but.value='active';
       fashion_but.value='';
       furn_but.value='';
+      grid_type.value = 't';
       g1.value = grid1.filter(a=>a.type==='tech');
       g2.value = grid2.filter(a=>a.type==='tech');
       g3.value = grid3.filter(a=>a.type==='tech');
@@ -236,6 +240,7 @@ let change_grid = type => {
       furn_but.value='active';
       tech_but.value='';
       fashion_but.value='';
+      grid_type.value = 'ff';
       g1.value = grid1.filter(a=>a.type==='frun');
       g2.value = grid2.filter(a=>a.type==='frun');
       g3.value = grid3.filter(a=>a.type==='frun');
@@ -386,14 +391,20 @@ let change_grid = type => {
 
 
 
-<div class="min min-header-main">
-
-
+<div :class="`min min-header-main min-header-main-`+grid_type">
 
 </div>
 
+<div class="min min-main-butts" >
+  
+  <div class="grid-butts">
+    <button @click="change_grid('f')" :class="fashion_but+theme" >fashion</button>
+    <button @click="change_grid('t')" :class="tech_but+theme">tech</button>
+    <button @click="change_grid('ff')" :class="furn_but+theme">furn</button>
+    </div>
+</div>
 
-<div class="min min-header-grid">
+<div :class="`min min-header-grid gird1-main-min-`+grid_type">
 
 <div class="small"></div>
 <div class="small2"></div>
@@ -404,7 +415,7 @@ let change_grid = type => {
 
 
 
-<div class="min min-header-grid2">
+<div :class="`min min-header-grid2 gird2-main-min-`+grid_type">
 
   <div class="small"></div>  
   <div class="large"></div>

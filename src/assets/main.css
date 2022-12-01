@@ -422,10 +422,24 @@ height: 50vh;
 .min-header-main{
 width: 100vw;
 height: 30vh;
-background-image:linear-gradient(90deg, rgba(0,0,0,0.05085784313725494) 0%, rgba(0,0,0,0.4682247899159664) 0%),url('https://cdn.cliqueinc.com/posts/288116/nyc-fall-outfits-288116-1594589145078-fb.700x0c.jpg');
-background-size: cover;
-background-position: center;
 }
+
+.min-header-main-f{
+    background-image:linear-gradient(90deg, rgba(0,0,0,0.05085784313725494) 0%, rgba(0,0,0,0.4682247899159664) 0%),url('https://cdn.cliqueinc.com/posts/288116/nyc-fall-outfits-288116-1594589145078-fb.700x0c.jpg');
+    background-size: cover;
+    background-position: center;
+    
+}
+
+
+
+.min-header-main-t{
+    background-image:linear-gradient(90deg, rgba(0,0,0,0.05085784313725494) 0%, rgba(0,0,0,0.4682247899159664) 0%),url('https://i0.wp.com/nasilemaktech.com/wp-content/uploads/2021/01/Samsung-Galaxy-S21-Ultra-preview-1.jpg');
+    background-size: cover;
+    background-position: center;
+    
+}
+
 
 
 .min-header-grid{
@@ -455,46 +469,109 @@ background-position: center;
 .min-header-grid2 .large{
     height: 30vh;
     grid-area: large;
-    background: url('https://thumbs.dreamstime.com/b/beauty-model-girl-posing-trendy-fashionable-spring-clothes-wear-apparel-beautiful-young-brunette-woman-outfit-fashion-197285729.jpg');
-    background-position: center;
-    background-size: cover;
 }
 
 
 .min-header-grid2 .small{
     height: 30vh;
     grid-area: small;
-    background: url('https://st2.depositphotos.com/2944823/5641/i/950/depositphotos_56416293-stock-photo-beautiful-ladylike-woman-in-elegant.jpg');
-    background-position: center;
-    background-size: cover;
+ 
 }
+
 
 .min-header-grid .large{
     grid-area: large;
-    background: url('https://thumbs.dreamstime.com/b/fashion-model-fashionable-clothes-beautiful-woman-near-wall-sexy-elegant-stylish-fall-shirt-scarf-trousers-sweater-shoes-bag-79059996.jpg');
     background-size: cover;
     background-position:center;
 }
 
 
 .min-header-grid .small{
-    background:url('https://images.unsplash.com/photo-1607606780078-eb06bd04a574?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEwfHx8ZW58MHx8fHw%3D&w=1000&q=80');
     background-size: cover;
     background-position:center;
     grid-area:small;
     height: 45vw;
 }
 
+.gird1-main-min-f .large{
+    background: url('https://thumbs.dreamstime.com/b/fashion-model-fashionable-clothes-beautiful-woman-near-wall-sexy-elegant-stylish-fall-shirt-scarf-trousers-sweater-shoes-bag-79059996.jpg');
+    background-size: cover;
+    background-position:center;
+}
 
+.gird1-main-min-f .small{
+    background:url('https://images.unsplash.com/photo-1607606780078-eb06bd04a574?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEwfHx8ZW58MHx8fHw%3D&w=1000&q=80');
+    background-size: cover;
+    background-position:center;
+}
 
-.min-header-grid .small2{
+.gird1-main-min-f .small2{
     background: url('https://i.pinimg.com/736x/54/8d/25/548d25216e6b405515f00c8514d666ad.jpg');
     background-size: cover;
     background-position:center;
+}
+
+
+
+.min-header-grid .small2{
     grid-area:small2;
     height: 45vw;
 }
 
+
+
+.gird2-main-min-f .large{
+    background: url('https://thumbs.dreamstime.com/b/beauty-model-girl-posing-trendy-fashionable-spring-clothes-wear-apparel-beautiful-young-brunette-woman-outfit-fashion-197285729.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+
+.gird2-main-min-f .small{
+    background: url('https://st2.depositphotos.com/2944823/5641/i/950/depositphotos_56416293-stock-photo-beautiful-ladylike-woman-in-elegant.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+
+
+
+
+.gird1-main-min-t .large{
+    background: url('https://thumbs.dreamstime.com/b/gaming-pc-rgb-led-lights-computer-assembled-hardware-components-rgb-colors-gaming-computer-185705787.jpg');
+    background-size: cover;
+    background-position:center;
+}
+
+.gird1-main-min-t .small{
+    background:url('https://images.unsplash.com/photo-1586712308574-566bd05e816e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHw%3D&w=1000&q=80');
+    background-size: cover;
+    background-position:center;
+}
+
+.gird1-main-min-t .small2{
+    background: url('https://m.media-amazon.com/images/S/mms-media-storage-prod/final/BrandPosts/brandPosts/348ca1ef-5e30-410a-861e-961fc2a6e979/396600aa-6cff-4c84-82cb-a2a020b6c98b/media._SL480_.jpeg');
+    background-size: cover;
+    background-position:center;
+}
+
+
+
+
+.gird2-main-min-t .large{
+    background: url('https://globalcomputers.pk/wp-content/uploads/2021/09/michelle-ding-c7yBhz9XTIs-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+
+.gird2-main-min-t .small{
+    background: url('https://i.ytimg.com/vi/YwdvV0EYRpg/maxresdefault.jpg');
+    background-position: center;
+    background-size: cover;
+}
 
 .max{
     display: none;
