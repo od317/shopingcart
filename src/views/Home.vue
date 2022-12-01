@@ -1140,28 +1140,28 @@ let dis_rating = (rating)=>{
             <div :class="`main-flex2 d-flex justify-content-between main-flex2-`+all">
 
               
-              <button v-if="token!=null" type="button" :class="button+` button1`" data-bs-toggle="modal2" data-bs-target="#exampleModal2">
+              <button v-if="token!=null" type="button" :class="button+` button1`" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <ion-icon name="cart-outline" class="cart-icon"></ion-icon> 
                 <label v-if="count>0" class="count-label">{{count}}</label>
                 </button>
 
 
 
-              <label  @click="tech" :class="button+` button1 button2`" data-bs-toggle="modal" >
+              <label  @click="tech" :class="button+` button1 button2`"  >
                 <label class="logo_main">
                 <ion-icon name="tv" class="cart-icon"></ion-icon>
               </label>
               </label>
  
  
-              <label  @click="fashion" :class="button+` button1 button2`" data-bs-toggle="modal" >
+              <label  @click="fashion" :class="button+` button1 button2`"  >
                 <label class="logo_main">
                 <ion-icon name="shirt" class="cart-icon"></ion-icon>
               </label>
               </label>
  
               
-              <label  @click="frun" :class="button+` button1 button2`" data-bs-toggle="modal" >
+              <label  @click="frun" :class="button+` button1 button2`"  >
                 <label class="logo_main">
                 <ion-icon name="bed" class="cart-icon"></ion-icon>
               </label>
@@ -1169,44 +1169,8 @@ let dis_rating = (rating)=>{
  
 
               
-             
-
-           
-
               
-              <div class="modal fade min" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div :class="`modal-content  modal_`+all">
-                    <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="exampleModalLabel">items in cart</h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      <div v-if="cart.length===0">No items selected</div>
-                      <div v-for="item in cart">
-                        <div class="modal-item-text2 modal-text2">{{item.name}}</div>
-                        <div class="modal-flex2 d-flex justify-content-evenly ">
-                          <img class="item-img " :src="item.img" alt=""> 
-                        </div> 
-                        <div class=" d-flex justify-content-between ">
-                          <div>  
-                            <label class="modal-text">price for each: {{item.price}}  </label><br> 
-                            <label class="modal-text">total count: {{item.count}} </label> <br>
-                            <label class="modal-text">total price: {{item.count*item.price}} </label>
-                          </div>
-                          <button @click="removei(item)" class="remove-but">remove</button>
-                        </div>
-                      </div>
-
-
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="submit-pur " data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="can-pur">{{total}}$</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+ 
             
            
             </div>
@@ -1233,16 +1197,49 @@ let dis_rating = (rating)=>{
       </div>
 
       <div :class="`min-img-home min min-img-home-`+all">
-        <img v-if="header_label=='fashion'" src="../assets/min-img.jpg" alt="">
-        <img v-else-if="header_label=='tech'" src="https://www.plus.mv/wp-content/uploads/2021/08/ps5-600x900.jpg" alt="">
-        <img v-else src="http://cdn.home-designing.com/wp-content/uploads/2021/04/wall-mounted-full-length-mirror-with-gold-frame-and-rounded-corners-hang-vertical-or-horizontal-versatile-wall-decor-inspiration-600x840.jpg">
-      </div>
+        <div v-if="header_label=='fashion'" class="imgg img-fash"></div>
+        <div v-else-if="header_label=='tech'" class="imgg img-tech"></div>
+        <div v-else class="imgg img-furn"></div>
+ </div>
 
      
 
 
       
+      <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog " >
+          <div :class="`modal-content  modal_`+all">
+            <div class="modal-header">
+              <h1 :class="`modal-title fs-5 min-title-`+all" id="staticBackdropLabel">your cart</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
 
+            <div class="modal-body">
+              <div v-if="cart.length===0">No items selected</div>
+              <div v-for="item in cart">
+                <div class="modal-item-text modal-text">{{item.name}}</div>
+                <div class="modal-flex d-flex justify-content-evenly ">
+                  <img class="item-img " :src="item.img" alt=""> 
+                </div> 
+                <div class=" d-flex justify-content-between ">
+                  <div>  
+                    <label class="modal-text">price for each: {{item.price}}  </label><br> 
+                    <label class="modal-text">total count: {{item.count}} </label> <br>
+                    <label class="modal-text">total price: {{item.count*item.price}} </label>
+                  </div>
+                  <button @click="removei(item)" class="remove-but">remove</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="submit-pur " data-bs-dismiss="modal">Close</button>
+              <button type="button" class="can-pur">{{total}}$</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
 
 
 

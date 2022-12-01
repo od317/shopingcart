@@ -419,6 +419,55 @@ height: 50vh;
 }
 
 
+.min-header-main{
+width: 100vw;
+height: 30vh;
+background-image:linear-gradient(90deg, rgba(0,0,0,0.05085784313725494) 0%, rgba(0,0,0,0.4682247899159664) 0%),url('https://cdn.cliqueinc.com/posts/288116/nyc-fall-outfits-288116-1594589145078-fb.700x0c.jpg');
+background-size: cover;
+background-position: center;
+}
+
+
+.min-header-grid{
+    width: 100vw;
+    display: grid;
+    margin:0 0 0 0;
+    padding: 0 0 0 0;
+    grid-template-columns: 30vw 25vw 25vw 20vw;
+    grid-template-areas:
+    'small large large large'
+    'small2 large large large';
+} 
+
+
+.min-header-grid .large{
+    background-color: red;
+    grid-area: large;
+    background: url('https://thumbs.dreamstime.com/b/fashion-model-fashionable-clothes-beautiful-woman-near-wall-sexy-elegant-stylish-fall-shirt-scarf-trousers-sweater-shoes-bag-79059996.jpg');
+    background-size: cover;
+    background-position:center;
+}
+
+
+.min-header-grid .small{
+    background:url('https://images.unsplash.com/photo-1607606780078-eb06bd04a574?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEwfHx8ZW58MHx8fHw%3D&w=1000&q=80');
+    background-size: cover;
+    background-position:center;
+    grid-area:small;
+    height: 45vw;
+}
+
+
+
+.min-header-grid .small2{
+    background: url('https://i.pinimg.com/736x/54/8d/25/548d25216e6b405515f00c8514d666ad.jpg');
+    background-size: cover;
+    background-position:center;
+    grid-area:small2;
+    height: 45vw;
+}
+
+
 .max{
     display: none;
 }

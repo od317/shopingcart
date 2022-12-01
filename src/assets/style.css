@@ -903,15 +903,45 @@ background-color: var(--dark4);
 
 
 .min-img-home{
-  width: 100vw;
   transition: .5s ease-in-out;
+  width: 100vw;
+  height: 30vh;
+  margin-top: 0;
+  padding-top: 0;
 }
-.min-img-home img{
+.min-img-home .imgg{
   width: 100%;
-  border-bottom-left-radius:7%;
-  border-bottom-right-radius:7%;
+  height:100%;
+  margin-top: 0;
+  border-bottom-left-radius:15%;
+  border-bottom-right-radius:15%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
+.img-fash{
+  background:  linear-gradient(90deg, rgba(0,0,0,0.05085784313725494) 0%, rgba(0,0,0,0.4682247899159664) 0%),url('https://thumbs.dreamstime.com/b/young-fashion-blond-woman-sunglasses-mall-interior-young-fashion-blond-woman-wearing-black-suit-jacket-sunglasses-121893301.jpg');
+}
+
+.img-tech{
+  background:  linear-gradient(90deg, rgba(0,0,0,0.05085784313725494) 0%, rgba(0,0,0,0.4682247899159664) 0%),url('https://uploads.ifdesign.de/award_img_346/oex_large/300378_02_0128.jpg');
+}
+
+
+.img-furn{
+  background:  linear-gradient(90deg, rgba(0,0,0,0.05085784313725494) 0%, rgba(0,0,0,0.4682247899159664) 0%),url('https://www.trackdesign.net/img/cms/2252020/img%201%20art%2022052020.jpg');
+}
+
+
+.img-min-cov{
+  border-bottom-left-radius:15%;
+  border-bottom-right-radius:15%;
+  width:100%;
+  height: 32vh;
+  position:absolute;
+  z-index: -1000;
+}
 
 .min-img-home-dark{
   background-color: var(--dark2);
@@ -955,6 +985,24 @@ margin-right: .5rem;
 .min-theme button .sunn{
   background-color:var(--light1);
   transition: .5s ease-in-out;
+}
+
+
+
+.count-label{
+  transform: translateX(20px) translateY(-20px);
+}
+
+
+.min-title-dark{
+  color:var(--dark4)
+}
+
+.modal-item-text{
+  margin-left: 0;
+  font-size: 1.2rem;
+  margin-bottom: .5rem;
+  margin-top: 1rem;
 }
 
   .max{

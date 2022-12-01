@@ -48,6 +48,12 @@ let grid1 = [{
 },{
   src:"https://i.pinimg.com/736x/f6/1d/f9/f61df9c12b4b5e6ccb4cce0ee84580e0.jpg",
   type:'fashion'
+},{
+  src:'https://thumbs.dreamstime.com/b/charming-good-looking-caucasian-young-woman-short-blonde-hair-sunglasses-black-suit-smiling-looking-camera-145531341.jpg',
+  type:'fashion'
+},{
+  src:'https://media.istockphoto.com/id/1259705254/photo/stylish-fashionable-blonde-woman-with-smoky-eye-makeup-in-jeans-white-t-shirt-and-black.jpg?s=612x612&w=0&k=20&c=jsfMFnIiaVZdxPg933bLGn1J3RVqqzFhycWeY0ZBJ18=',
+  type:'fashion'
 }];
 
 
@@ -73,6 +79,12 @@ let grid2 = [{
 },{
   src:"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gh-080322-best-laptop-backpacks-1659969009.png?crop=0.466xw:0.717xh;0.0385xw,0.234xh&resize=640:*",
   type:'tech'
+},{
+  src:'https://thumbs.dreamstime.com/b/young-fashion-blond-woman-sunglasses-mall-interior-young-fashion-blond-woman-wearing-black-suit-jacket-sunglasses-121893301.jpg',
+  type:'fashion'
+},{
+  src:'https://www.mychicobsession.com/wp-content/uploads/2020/11/classic-style-fall-fashion-15-of-57-1600x2400.jpg',
+  type:'fashion'
 }];
 
 
@@ -96,6 +108,12 @@ let grid3 = [{
 },{
   src:"https://assets2.cbsnewsstatic.com/hub/i/2022/06/21/67dee043-3be1-4392-a07c-13b202a77960/razer-enki-pro.jpg",
   type:'frun'
+},{
+  src:'https://images.unsplash.com/photo-1581338834647-b0fb40704e21?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8ZmFzaGlvbiUyMG1vZGVsfGVufDB8fDB8fA%3D%3D&w=1000&q=80',
+  type:'fashion'
+},{
+  src:'https://i.pinimg.com/736x/d9/87/82/d987823feadc75635e60162c98574489.jpg',
+  type:'fashion'
 }];
 
 
@@ -122,6 +140,12 @@ let grid4 = [{
   type:'tech'
 },{
   src:"https://media.bergdorfgoodman.com/f_auto,q_auto/01/bg_4187908_100244_m",
+  type:'fashion'
+},{
+  src:"https://thumbs.dreamstime.com/b/fashion-model-street-beautiful-woman-fashionable-clothes-sexy-stylish-fall-shirt-scarf-pants-sweater-shoes-sitting-stairs-79059506.jpg",
+  type:'fashion'
+},{
+  src:'https://images.squarespace-cdn.com/content/v1/6042a94f08e8ab42a10b9a95/1617577123610-Y8B5RMHU88W0O0LNLJ5P/unsplash-image-gaIaLZO9q1I.jpg',
   type:'fashion'
 }];
 
@@ -362,7 +386,24 @@ let change_grid = type => {
 
 
 
-<div class="grid-buttns">
+<div class="min min-header-main">
+
+
+
+</div>
+
+
+<div class="min min-header-grid">
+
+<div class="small"></div>
+<div class="small2"></div>
+
+<div class="large"></div>
+
+</div>
+
+
+<div class="grid-buttns max">
   
   <div class="grid-butts">
   <button @click="change_grid('f')" :class="fashion_but+theme" >fashion</button>
