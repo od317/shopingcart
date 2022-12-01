@@ -403,6 +403,15 @@ let change_grid = type => {
 </div>
 
 
+
+<div class="min min-header-grid2">
+
+  <div class="small"></div>  
+  <div class="large"></div>
+  
+  </div>
+
+
 <div class="grid-buttns max">
   
   <div class="grid-butts">

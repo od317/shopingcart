@@ -440,8 +440,36 @@ background-position: center;
 } 
 
 
+
+.min-header-grid2{
+    width: 100vw;
+    display: grid;
+    margin:0 0 0 0;
+    padding: 0 0 0 0;
+    grid-template-columns: 20vw 20vw 25vw 35vw;
+    grid-template-areas:
+    'large large large small'
+} 
+
+
+.min-header-grid2 .large{
+    height: 30vh;
+    grid-area: large;
+    background: url('https://thumbs.dreamstime.com/b/beauty-model-girl-posing-trendy-fashionable-spring-clothes-wear-apparel-beautiful-young-brunette-woman-outfit-fashion-197285729.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+
+.min-header-grid2 .small{
+    height: 30vh;
+    grid-area: small;
+    background: url('https://st2.depositphotos.com/2944823/5641/i/950/depositphotos_56416293-stock-photo-beautiful-ladylike-woman-in-elegant.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
 .min-header-grid .large{
-    background-color: red;
     grid-area: large;
     background: url('https://thumbs.dreamstime.com/b/fashion-model-fashionable-clothes-beautiful-woman-near-wall-sexy-elegant-stylish-fall-shirt-scarf-trousers-sweater-shoes-bag-79059996.jpg');
     background-size: cover;
