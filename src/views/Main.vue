@@ -32,7 +32,7 @@ let set_button_ac = (num)=>{
 
 let grid1 = [{
  src:"https://www.paylessfurnituretexas.com/www/clients/bestbuyhomefurnitureup/clientfiles/homePageAd_col-3-small/0380FBAA-5056-BF1C-1C44A2DAFC0BC5E3-0.jpeg",
- type:'furn'
+ type:'frun'
 },{
  src:"https://c.dns-shop.ru/thumb/st1/fit/760/600/2766296abeb9fd5d4e923c7cbcf4e961/q93_4ee622606506ae82227708857e10990a9f7ff86dd9edffae17f6ff332b0dd46d.jpg",
  type:'tech'
@@ -41,7 +41,7 @@ let grid1 = [{
  type:'fashion'
 },{
  src:"https://paramountbathrooms.co.uk/wp-content/uploads/Gallio-Supermatt-Marine-Blue-1-1024x724.jpg",
- type:'furn'
+ type:'frun'
 },{
  src:"https://media.karousell.com/media/photos/products/2020/02/27/glorious_model_o_rgb_gaming_mouse_1582813513_2d3f342eb_progressive",
  type:'tech'
@@ -94,7 +94,8 @@ let grid3 = [{
   src:"https://www.digitaltrends.com/wp-content/uploads/2021/09/iphone-13-pro-review-dan-baker-35.jpg?p=1",
   type:'tech'
 },{
-  src:"https://assets2.cbsnewsstatic.com/hub/i/2022/06/21/67dee043-3be1-4392-a07c-13b202a77960/razer-enki-pro.jpg"
+  src:"https://assets2.cbsnewsstatic.com/hub/i/2022/06/21/67dee043-3be1-4392-a07c-13b202a77960/razer-enki-pro.jpg",
+  type:'frun'
 }];
 
 
@@ -125,10 +126,21 @@ let grid4 = [{
 }];
 
 
+let fashion_but = ref('active');
+let tech_but = ref(' ');
+let furn_but = ref(' ');
 
+let g1 = ref([]);
+g1.value = grid1.filter(a=>a.type==='fashion');
 
+let g2 = ref([]);
+g2.value = grid2.filter(a=>a.type==='fashion');
 
+let g3 = ref([]);
+g3.value = grid3.filter(a=>a.type==='fashion');
 
+let g4 = ref([]);
+g4.value = grid4.filter(a=>a.type==='fashion');
 
 
 
@@ -175,7 +187,42 @@ token.value = localStorage.getItem('token');
 
 
 
+let change_grid = type => {
 
+  switch(type){
+    case 'f':
+      fashion_but.value='active';
+      tech_but.value='';
+      furn_but.value='';
+      g1.value = grid1.filter(a=>a.type==='fashion');
+      g2.value = grid2.filter(a=>a.type==='fashion');
+      g3.value = grid3.filter(a=>a.type==='fashion');
+      g4.value = grid4.filter(a=>a.type==='fashion');
+      break;
+    case 't':
+      tech_but.value='active';
+      fashion_but.value='';
+      furn_but.value='';
+      g1.value = grid1.filter(a=>a.type==='tech');
+      g2.value = grid2.filter(a=>a.type==='tech');
+      g3.value = grid3.filter(a=>a.type==='tech');
+      g4.value = grid4.filter(a=>a.type==='tech');
+      break;
+    case 'ff':
+      furn_but.value='active';
+      tech_but.value='';
+      fashion_but.value='';
+      g1.value = grid1.filter(a=>a.type==='frun');
+      g2.value = grid2.filter(a=>a.type==='frun');
+      g3.value = grid3.filter(a=>a.type==='frun');
+      g4.value = grid4.filter(a=>a.type==='frun');
+      
+      break;
+    default:
+      break;      
+  }
+
+}
 
 
 </script>
@@ -315,17 +362,23 @@ token.value = localStorage.getItem('token');
 
 
 
+<div class="grid-buttns">
+  
+  <div class="grid-butts">
+  <button @click="change_grid('f')" :class="fashion_but+theme" >fashion</button>
+  <button @click="change_grid('t')" :class="tech_but+theme">tech</button>
+  <button @click="change_grid('ff')" :class="furn_but+theme">furn</button>
+  </div>
 
 
-<div class="grid_sec d-flex justify-content-evenly">
+<div class="grid_sec">
 
   
-
 <!-- 1 -->
 
 <div class="sec_grid_f">
     
-  <div v-for="img in grid1" class="sec_grid_img"> 
+  <div v-for="img in g1" class="sec_grid_img"> 
     <img :src="img.src" alt="">
     <div  class="max d-flex flex-column card_hov">
      <label class="" for="">see more in {{img.type}}</label>  
@@ -342,7 +395,7 @@ token.value = localStorage.getItem('token');
 <div class="sec_grid_f">
 
 
-  <div v-for="img in grid2" class="sec_grid_img"> 
+  <div v-for="img in g2" class="sec_grid_img"> 
     <img :src="img.src" alt="">
     <div  class="max d-flex flex-column card_hov">
       <label class="" for="">see more in {{img.type}}</label>  
@@ -359,7 +412,7 @@ token.value = localStorage.getItem('token');
 
 
 
-  <div v-for="img in grid3" class="sec_grid_img"> 
+  <div v-for="img in g3" class="sec_grid_img"> 
     <img :src="img.src" alt="">
     <div  class="d-flex flex-column card_hov">
       <label class="" for="">see more in {{img.type}}</label>  
@@ -379,7 +432,7 @@ token.value = localStorage.getItem('token');
 
 
 
-  <div v-for="img in grid4" class="sec_grid_img"> 
+  <div v-for="img in g4" class="sec_grid_img"> 
     <img :src="img.src" alt="">
     <div  class="d-flex flex-column card_hov">
      <label class="" for="">see more in {{img.type}}</label>  
@@ -392,6 +445,7 @@ token.value = localStorage.getItem('token');
 
 </div>
 
+</div>
 
 <div :class="`main-footer main-footer-`+theme"><router-link to="/" :class="`link `">Go to store</router-link></div>
 

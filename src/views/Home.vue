@@ -814,6 +814,7 @@ let tech = ()=>{
   filterss.value = tech_filters;
   header_label.value='tech';
   filters2.value.fill('none');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
   ss();
 }
 
@@ -824,6 +825,7 @@ let fashion = ()=>{
   filterss.value = fashion_filters;
   header_label.value='fashion';
   filters2.value.fill('none');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
   ss();
 }
 
@@ -835,6 +837,7 @@ let frun = ()=>{
 filterss.value = frun_filters;
 header_label.value='frun';
 filters2.value.fill('none');
+window.scrollTo({ top: 0, behavior: 'smooth' });
   ss();
 }
 
@@ -1088,7 +1091,7 @@ let dis_rating = (rating)=>{
               <button v-if="!dark" class="theme-button theme-button1" @click="change_dark" ><ion-icon name="moon" class="moon"></ion-icon></button>
               <button v-if="dark" class="theme-button theme-button2" @click="change_light" ><ion-icon name="sunny" class="sun"></ion-icon></button>  
               
-              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal fade max" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                   <div :class="`modal-content  modal_`+all">
                     <div class="modal-header">
@@ -1132,26 +1135,17 @@ let dis_rating = (rating)=>{
 
 
 
-
-
-
-
-      <div :class="`min min-theme min-theme-`+all">
-        <button v-if="!dark" class="theme-button theme-button1" @click="change_dark" ><ion-icon name="moon" class="moon"></ion-icon></button>
-        <button v-if="dark" class="theme-button theme-button2" @click="change_light" ><ion-icon name="sunny" class="sun"></ion-icon></button>  
-      </div>
-
-
       <nav :class="nav+` navbar2`">
         <div class="container-fluid">
             <div :class="`main-flex2 d-flex justify-content-between main-flex2-`+all">
 
-              <label   :class="button+` button1 button2`" data-bs-toggle="modal" >
-                <router-link to="main" class="logo_main">
-                <ion-icon name="bag-handle-outline" class="cart-icon"></ion-icon>
-              </router-link>
-              </label>
- 
+              
+              <button v-if="token!=null" type="button" :class="button+` button1`" data-bs-toggle="modal2" data-bs-target="#exampleModal2">
+                <ion-icon name="cart-outline" class="cart-icon"></ion-icon> 
+                <label v-if="count>0" class="count-label">{{count}}</label>
+                </button>
+
+
 
               <label  @click="tech" :class="button+` button1 button2`" data-bs-toggle="modal" >
                 <label class="logo_main">
@@ -1175,12 +1169,12 @@ let dis_rating = (rating)=>{
  
 
               
-            
+             
 
            
 
               
-              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal fade min" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                   <div :class="`modal-content  modal_`+all">
                     <div class="modal-header">
@@ -1190,8 +1184,8 @@ let dis_rating = (rating)=>{
                     <div class="modal-body">
                       <div v-if="cart.length===0">No items selected</div>
                       <div v-for="item in cart">
-                        <div class="modal-item-text modal-text">{{item.name}}</div>
-                        <div class="modal-flex d-flex justify-content-evenly ">
+                        <div class="modal-item-text2 modal-text2">{{item.name}}</div>
+                        <div class="modal-flex2 d-flex justify-content-evenly ">
                           <img class="item-img " :src="item.img" alt=""> 
                         </div> 
                         <div class=" d-flex justify-content-between ">
@@ -1222,6 +1216,35 @@ let dis_rating = (rating)=>{
 
 
 
+      <div class="min-header min">
+        <div class="min-header-cont">
+        <label   :class="button+` button1 button2`" >
+          <router-link to="main" class="logo_main">
+          <ion-icon name="bag-handle-outline" class="cart-icon"></ion-icon>
+        </router-link>
+        </label>
+
+
+        <div :class="`min min-theme min-theme-`+all">
+          <button v-if="!dark" class="theme-button theme-button1" @click="change_dark" ><ion-icon name="moon" class="moon"></ion-icon></button>
+          <button v-if="dark" class="theme-button theme-button2" @click="change_light" ><ion-icon name="sunny" class="sun sunn"></ion-icon></button>  
+        </div>
+      </div>
+      </div>
+
+      <div :class="`min-img-home min min-img-home-`+all">
+        <img v-if="header_label=='fashion'" src="../assets/min-img.jpg" alt="">
+        <img v-else-if="header_label=='tech'" src="https://www.plus.mv/wp-content/uploads/2021/08/ps5-600x900.jpg" alt="">
+        <img v-else src="http://cdn.home-designing.com/wp-content/uploads/2021/04/wall-mounted-full-length-mirror-with-gold-frame-and-rounded-corners-hang-vertical-or-horizontal-versatile-wall-decor-inspiration-600x840.jpg">
+      </div>
+
+     
+
+
+      
+
+
+
 
 
 
@@ -1239,9 +1262,7 @@ let dis_rating = (rating)=>{
 
       <imgH class="max" :label="header_label" />
       
-      <div :class="`imgh2 min imgh2-`+all">
-
-      </div>
+     
 
       <div class="max disc_cont">
         <div :class="`disc disc-`+all">discount by <span> 60% </span> when you buy more than 3 items</div>
@@ -1357,7 +1378,7 @@ let dis_rating = (rating)=>{
 
 
 
-<div :class="background+`  con-flex-min`">
+<div :class="background+` min con-flex-min`">
 
 
 

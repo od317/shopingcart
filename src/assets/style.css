@@ -810,13 +810,11 @@ background-color: var(--dark4);
   }
   .min-theme-dark{
     transition: 0.5s ease-in-out;
-    background-color:var(--dark2);
   }
 
 
   .min-theme-light{
     transition: 0.5s ease-in-out;
-    background-color:var(--light4);
   }
 
   .min-theme button{
@@ -826,7 +824,6 @@ background-color: var(--dark4);
   
   .min-theme .theme-button1{
     border-radius: 50%;
-    background-color: #222121;
     padding: 0;
     font-size: .4rem;
     margin-top: .3rem;
@@ -834,7 +831,6 @@ background-color: var(--dark4);
 
   .min-theme .theme-button2{
     border-radius: 50%;
-    background-color: var(--light1);
     padding: 0;
     font-size: .4rem;
     margin-top: .3rem;
@@ -903,6 +899,62 @@ background-color: var(--dark4);
   border: none;
   outline: none;
   padding: .2rem .5rem .2rem .5rem;
+}
+
+
+.min-img-home{
+  width: 100vw;
+  transition: .5s ease-in-out;
+}
+.min-img-home img{
+  width: 100%;
+  border-bottom-left-radius:7%;
+  border-bottom-right-radius:7%;
+}
+
+
+.min-img-home-dark{
+  background-color: var(--dark2);
+}
+
+.min-img-home-light{
+  background-color:var(--light4);
+}
+
+
+.min-header{
+ position:absolute;
+ width: 100vw;
+}
+
+.min-header-cont{
+  display: flex;
+  justify-content:space-between;
+  width: 100%; 
+}
+
+.min-theme{
+background-color: transparent;
+}
+
+.min-theme button{
+display: block;
+margin-right: .5rem;
+}
+
+.min-theme button ion-icon{
+  font-size:1rem;
+}
+
+
+.min-theme button .moon{
+  background-color: var(--dark2);
+  transition: .5s ease-in-out;
+}
+
+.min-theme button .sunn{
+  background-color:var(--light1);
+  transition: .5s ease-in-out;
 }
 
   .max{

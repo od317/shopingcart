@@ -15,11 +15,8 @@ height: 50vh;
 
 .grid_sec{
     width: 100vw;
-    background-color: var(--light4);
-    display: grid;
+    display: flex;
     justify-items: center;
-    grid-template-columns: auto auto auto auto;
-    grid-template-areas:"";
 }
 
 
@@ -117,16 +114,48 @@ height: 50vh;
 
 .grid_sec{
     background-color:transparent;
-    padding: 6rem;
+    padding:0 6rem 6rem 6rem;
     width: 100vw;
     color: black;
-    margin-top: 8rem;
     position: relative;
 
 }
 
+
+.grid-butts{
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    margin-left: .5rem;
+    padding:0 6rem 0rem 6rem;
+}
+
+
+.grid-butts button{
+    border: none;
+    outline: none;
+    padding: .6rem;
+    border-radius: 10px;
+    width: 25%;
+    font-weight: 500;
+    transition: .4s ease-in-out;
+}
+
+.activedark{
+  background-color: var(--dark2);
+  color: white;
+}
+
+
+.activelight{
+    background-color: var(--light1);
+    color: white;
+  }
+
 .sec_grid_f{
     position: relative;
+    margin-left: .5rem;
+    margin-right: .5rem;
     width: 24%;
     height: 100%;
     display: grid;    
@@ -216,7 +245,6 @@ height: 50vh;
 .main_bf{
     margin-top: 65vh;
     display: grid;
-    height: 60vh;
     position: relative;
     grid-template-columns:50% 45%;
     margin-left: 5rem;
@@ -313,6 +341,11 @@ height: 50vh;
 }
 
 
+.grid-buttns{
+    display: flex;
+    flex-direction: column;
+}
+
 
 @media only screen and (max-width:690px) {
 
@@ -364,6 +397,27 @@ height: 50vh;
 .sec_grid_img:hover .card_hov label{
     display:none;
  }
+
+ .grid-butts{
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    margin-left: 0;
+    margin-bottom: .4rem;
+    padding:.5rem .5rem 0 0;
+}
+
+ .grid-butts button{
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    font-weight: 500;
+    transition: .4s ease-in-out;
+}
+
 
 .max{
     display: none;
