@@ -918,6 +918,11 @@ background-color: var(--dark4);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  color:white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
 }
 
 .img-fash{
@@ -1014,6 +1019,63 @@ margin-right: .5rem;
   background: linear-gradient(90deg, rgba(0,0,0,0.05085784313725494) 0%, rgba(255,255,255,0.7791491596638656) 0%);
   color:black;
   border-radius: 50%;
+}
+
+.search-cont{
+  transition: .5s ease-in-out;
+  padding: 1rem;
+  padding-top: 2rem;
+}
+
+
+.search-contc{
+  transition: .5s ease-in-out;
+  display: flex;
+}
+
+
+.search-contc ion-icon{
+
+  padding: 1rem;
+  font-size: 1.3rem;
+  border-radius: 10px 0 0 10px ;
+  outline: none;
+  border: none;
+}
+
+.search-contc input{
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 0 10px 10px 0 ;
+  outline: none;
+
+}
+
+
+.search-cont-dark ion-icon{
+    color:black;
+    background-color: white;
+}
+
+.search-cont-dark{
+  background-color: var(--dark2);
+  
+}
+
+.search-cont-light{
+  background-color: var(--light4);
+}
+
+.search-cont-light .search-contc ion-icon{
+  background-color: var(--light1);
+}
+
+.search-cont-light .search-contc input{
+  background-color: var(--light1);
+}
+
+.b-cards{
+  
 }
 
   .max{

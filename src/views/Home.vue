@@ -1201,13 +1201,27 @@ let dis_rating = (rating)=>{
       </div>
 
       <div :class="`min-img-home min min-img-home-`+all">
-        <div v-if="header_label=='fashion'" class="imgg img-fash"></div>
-        <div v-else-if="header_label=='tech'" class="imgg img-tech"></div>
-        <div v-else class="imgg img-furn"></div>
- </div>
+        <div v-if="header_label=='fashion'" class="imgg img-fash">fashion</div>
+        <div v-else-if="header_label=='tech'" class="imgg img-tech">tech</div>
+        <div v-else class="imgg img-furn">furn</div>
+      </div>
 
      
 
+
+     <div :class="`min search-cont search-cont-`+all">
+      <div class="search-contc">
+      <ion-icon name="search-outline"></ion-icon>
+       <input  type="text">
+      </div>
+    </div>
+
+
+
+
+    <div class="min b-cards">
+      
+    </div>
 
       
       <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">

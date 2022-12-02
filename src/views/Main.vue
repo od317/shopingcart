@@ -150,11 +150,11 @@ let grid4 = [{
 }];
 
 
-let fashion_but = ref('');
-let tech_but = ref('active');
+let fashion_but = ref('active');
+let tech_but = ref('');
 let furn_but = ref(' ');
 
-let grid_type = ref('t');
+let grid_type = ref('f');
 
 let g1 = ref([]);
 g1.value = grid1.filter(a=>a.type==='fashion');
@@ -424,19 +424,21 @@ let change_grid = type => {
 
 
 <div :class="`min min-header-main min-header-main-`+grid_type">
+  
+  <router-link to="/" class="min title">sotre</router-link>
 
 </div>
 
 
 
 <div class="min mid-main">
-  <div class="img-cont-min-main"><img src="https://freepngimg.com/download/apple_iphone/133355-12-apple-iphone-free-clipart-hd.png" alt=""></div>
+  <div class="img-cont-min-main"><img src="https://media.glamour.com/photos/58d14ad9163c40079b6a6d52/master/pass/product_red_onred.jpg" alt=""></div>
   <div class="text-cont-min-main">over 100 device on sale</div>
 
 </div>
 
 
-
+<!--
 <div class="min min-main-butts" >
   
   <div class="grid-butts">
@@ -445,6 +447,9 @@ let change_grid = type => {
     <button @click="change_grid('ff')" :class="furn_but+theme">furn</button>
     </div>
 </div>
+-->
+
+<label :class="`gird-title min gird-title-`+theme" for="">all computer equipments:</label>
 
 <div :class="`min min-header-grid gird1-main-min-`+grid_type">
 
