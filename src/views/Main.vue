@@ -150,11 +150,11 @@ let grid4 = [{
 }];
 
 
-let fashion_but = ref('active');
-let tech_but = ref(' ');
+let fashion_but = ref('');
+let tech_but = ref('active');
 let furn_but = ref(' ');
 
-let grid_type = ref('f');
+let grid_type = ref('t');
 
 let g1 = ref([]);
 g1.value = grid1.filter(a=>a.type==='fashion');
@@ -389,11 +389,53 @@ let change_grid = type => {
 
 </div>
 
+<div class="min-header min">
+  <div class="min-header-cont">
+  <label   :class="button+` button1 button2`" >
+    <router-link to="/" class="logo_main">
+    <ion-icon name="basket-outline" class="cart-icon"></ion-icon>
+  </router-link>
+  </label>
+
+
+  <div :class="`min min-theme min-theme-`+all">
+    <button v-if="!dark" class="theme-button theme-button1" @click="change_dark" ><ion-icon name="moon" class="moon"></ion-icon></button>
+    <button v-if="dark" class="theme-button theme-button2" @click="change_light" ><ion-icon name="sunny" class="sun sunn"></ion-icon></button>  
+  </div>
+</div>
+
+<div class="min min-header-flex">
+
+  <ion-icon v-if="grid_type==='f'" @click="change_grid('f')" name="shirt-outline" :class="`cart-icon cart-icon-active`"></ion-icon>
+  <ion-icon v-else @click="change_grid('f')" name="shirt-outline" :class="`cart-icon `"></ion-icon>
+
+  <ion-icon v-if="grid_type==='t'" @click="change_grid('t')" name="phone-portrait-outline" :class="`cart-icon cart-icon-active`"></ion-icon>
+  <ion-icon v-else @click="change_grid('t')" name="phone-portrait-outline" :class="`cart-icon `"></ion-icon>
+  
+  <ion-icon v-if="grid_type==='ff'" @click="change_grid('ff')" name="bed-outline" :class="`cart-icon cart-icon-active`"></ion-icon>
+  <ion-icon v-else @click="change_grid('ff')" name="bed-outline" :class="`cart-icon `"></ion-icon>
+
+
+
+</div>
+
+</div>
+
 
 
 <div :class="`min min-header-main min-header-main-`+grid_type">
 
 </div>
+
+
+
+<div class="min mid-main">
+  <div class="img-cont-min-main"><img src="https://freepngimg.com/download/apple_iphone/133355-12-apple-iphone-free-clipart-hd.png" alt=""></div>
+  <div class="text-cont-min-main">over 100 device on sale</div>
+
+</div>
+
+
 
 <div class="min min-main-butts" >
   

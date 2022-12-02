@@ -83,11 +83,10 @@ body{
   .navbar2{
     display:none;
 }
- 
+
   .sec-flex{
       margin-right:5rem;
-      padding:1rem;
-  
+      padding: 1rem;
   }
   
   .main-flex{
@@ -749,6 +748,7 @@ background-color: var(--dark4);
     transition: .5s ease-in-out;
     z-index: 2000;
     border-radius: 20px;
+    padding: .2rem;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;   }
 
    .imgh2{
@@ -1003,6 +1003,17 @@ margin-right: .5rem;
   font-size: 1.2rem;
   margin-bottom: .5rem;
   margin-top: 1rem;
+}
+
+.cart-icon{
+  padding: .2rem;
+  transition: .5s ease-in-out;
+}
+
+.cart-icon-active{
+  background: linear-gradient(90deg, rgba(0,0,0,0.05085784313725494) 0%, rgba(255,255,255,0.7791491596638656) 0%);
+  color:black;
+  border-radius: 50%;
 }
 
   .max{

@@ -1149,21 +1149,25 @@ let dis_rating = (rating)=>{
 
               <label  @click="tech" :class="button+` button1 button2`"  >
                 <label class="logo_main">
-                <ion-icon name="tv" class="cart-icon"></ion-icon>
+                  
+                <ion-icon v-if="header_label==='tech'" name="phone-portrait-outline" class="cart-icon cart-icon-active"></ion-icon>
+                <ion-icon v-else name="phone-portrait-outline" class="cart-icon"></ion-icon>
               </label>
               </label>
  
  
               <label  @click="fashion" :class="button+` button1 button2`"  >
                 <label class="logo_main">
-                <ion-icon name="shirt" class="cart-icon"></ion-icon>
+                <ion-icon v-if="header_label==='fashion'" name="shirt-outline" class="cart-icon cart-icon-active"></ion-icon>
+                <ion-icon v-else name="shirt-outline" class="cart-icon"></ion-icon>
               </label>
               </label>
  
               
               <label  @click="frun" :class="button+` button1 button2`"  >
                 <label class="logo_main">
-                <ion-icon name="bed" class="cart-icon"></ion-icon>
+                <ion-icon v-if="header_label==='frun'" name="bed-outline" class="cart-icon cart-icon-active"></ion-icon>
+                <ion-icon v-else name="bed-outline" class="cart-icon"></ion-icon>
               </label>
               </label>
  
