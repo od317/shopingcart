@@ -421,11 +421,60 @@ height: 50vh;
 
 .min-header-main{
 width: 100vw;
-height: 30vh;
+height: 45vh;
+}
+
+.min-main-sec-text-but{
+    transform: translateY(-46%);
+    background-color: var(--dark5);
+    width: 100vw;
+    height: 10vh;
+    background-color:var(--dark5);
+    display: flex;
+    border-radius:90%;
+    align-items: center;
+    justify-content: center;
+}
+
+.but-text-cont{
+    padding: 2rem;
+    transform: translateY(-35%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.but-text-cont .large-text{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.but-text-cont .small-text{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 1.1rem;
+    margin-top: .5rem;
+    text-align: center;
+}
+
+
+.but-text-cont button{
+
+padding: .7rem;
+width: 30%;
+margin-top: 1rem;
+border-radius: 10px;
+border: none;
+outline: none;
 }
 
 .min-header-main-f{
-    background-image:linear-gradient(90deg, rgba(0,0,0,0.05085784313725494) 0%, rgba(0,0,0,0.4682247899159664) 0%),url('https://cdn.cliqueinc.com/posts/288116/nyc-fall-outfits-288116-1594589145078-fb.700x0c.jpg');
+    background-image:url('https://thumbs.dreamstime.com/b/happy-woman-shopping-bags-using-laptop-online-concept-portrait-joyful-blonde-standing-holding-bright-shopper-isolated-229839697.jpg');
     background-size: cover;
     background-position: center;
     
@@ -608,7 +657,6 @@ height: 30vh;
 
 
 .min-header-main{
-    margin-bottom: 2rem;
     min-height: 200px;
 }
 

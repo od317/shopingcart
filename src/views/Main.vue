@@ -404,37 +404,24 @@ let change_grid = type => {
   </div>
 </div>
 
-<div class="min min-header-flex">
 
-  <ion-icon v-if="grid_type==='f'" @click="change_grid('f')" name="shirt-outline" :class="`cart-icon cart-icon-active`"></ion-icon>
-  <ion-icon v-else @click="change_grid('f')" name="shirt-outline" :class="`cart-icon `"></ion-icon>
 
-  <ion-icon v-if="grid_type==='t'" @click="change_grid('t')" name="phone-portrait-outline" :class="`cart-icon cart-icon-active`"></ion-icon>
-  <ion-icon v-else @click="change_grid('t')" name="phone-portrait-outline" :class="`cart-icon `"></ion-icon>
+</div>
+
+
+
+<div :class="`min min-header-main min-header-main-f`">
   
-  <ion-icon v-if="grid_type==='ff'" @click="change_grid('ff')" name="bed-outline" :class="`cart-icon cart-icon-active`"></ion-icon>
-  <ion-icon v-else @click="change_grid('ff')" name="bed-outline" :class="`cart-icon `"></ion-icon>
-
-
-
-</div>
 
 </div>
 
 
+<div class="min min-main-sec-text-but"></div>
 
-<div :class="`min min-header-main min-header-main-`+grid_type">
-  
-  <router-link to="/" class="min title">sotre</router-link>
-
-</div>
-
-
-
-<div class="min mid-main">
-  <div class="img-cont-min-main"><img src="https://media.glamour.com/photos/58d14ad9163c40079b6a6d52/master/pass/product_red_onred.jpg" alt=""></div>
-  <div class="text-cont-min-main">over 100 device on sale</div>
-
+<div class="but-text-cont min">
+  <label class="large-text">find product with best prices</label>
+  <label class="small-text">tech,fashion,furn you can find any product you want when ever you want where ever you are</label>
+  <button>Store</button>
 </div>
 
 
@@ -451,7 +438,8 @@ let change_grid = type => {
 
 <label :class="`gird-title min gird-title-`+theme" for="">all computer equipments:</label>
 
-<div :class="`min min-header-grid gird1-main-min-`+grid_type">
+
+<div :class="`min min-header-grid gird1-main-min-f  `">
 
 <div class="small"></div>
 <div class="small2"></div>
@@ -462,12 +450,38 @@ let change_grid = type => {
 
 
 
-<div :class="`min min-header-grid2 gird2-main-min-`+grid_type">
+<div :class="`min min-header-grid2 gird2-main-min-f`">
 
   <div class="small"></div>  
   <div class="large"></div>
   
   </div>
+
+
+
+
+  <label :class="`gird-title min gird-title-`+theme" for="">all computer equipments:</label>
+
+
+  
+  <div :class="`min min-header-grid gird1-main-min-t`">
+
+    <div class="small"></div>
+    <div class="small2"></div>
+    
+    <div class="large"></div>
+    
+    </div>
+    
+    
+    
+    <div :class="`min min-header-grid2 gird2-main-min-t`">
+    
+      <div class="small"></div>  
+      <div class="large"></div>
+      
+      </div>
+    
 
 
 <div class="grid-buttns max">
