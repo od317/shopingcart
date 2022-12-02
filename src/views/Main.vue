@@ -410,18 +410,17 @@ let change_grid = type => {
 
 
 
-<div :class="`min min-header-main min-header-main-f`">
-  
+<div :class="`min min-header-main min-header-main-f `">
 
 </div>
 
 
-<div class="min min-main-sec-text-but"></div>
+<div :class="`min min-main-sec-text-but min-main-sec-text-but-`+theme"></div>
 
 <div class="but-text-cont min">
-  <label class="large-text">find product with best prices</label>
+  <label class="large-text">find product with best <span class="color">prices</span></label>
   <label class="small-text">tech,fashion,furn you can find any product you want when ever you want where ever you are</label>
-  <button>Store</button>
+  <router-link to="/" class="link">Store</router-link>
 </div>
 
 

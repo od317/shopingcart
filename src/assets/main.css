@@ -438,7 +438,7 @@ height: 45vh;
 
 .but-text-cont{
     padding: 2rem;
-    transform: translateY(-35%);
+    transform: translateY(-30%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -446,11 +446,10 @@ height: 45vh;
 }
 
 .but-text-cont .large-text{
-    display: flex;
-    justify-content: center;
     color: white;
     font-size: 2rem;
     text-align: center;
+    
 }
 
 .but-text-cont .small-text{
@@ -463,23 +462,46 @@ height: 45vh;
 }
 
 
-.but-text-cont button{
+.but-text-cont .link{
 
 padding: .7rem;
 width: 30%;
 margin-top: 1rem;
 border-radius: 10px;
+font-size: 1.2rem;
 border: none;
 outline: none;
+color:white;
+background-color:var(--light1);
+text-align: center;
+text-decoration: none;
+}
+
+.color{
+    color:var(--light1);
+    display: inline-block;
 }
 
 .min-header-main-f{
-    background-image:url('https://thumbs.dreamstime.com/b/happy-woman-shopping-bags-using-laptop-online-concept-portrait-joyful-blonde-standing-holding-bright-shopper-isolated-229839697.jpg');
+    background-image:url('https://img.freepik.com/premium-photo/beautiful-asian-woman-carrying-colorful-bags-shopping-online-with-mobile-phone_8087-3877.jpg?w=360');
     background-size: cover;
     background-position: center;
     
 }
 
+.min-main-sec-text-but--dark{
+
+   background-color: var(--dark5);
+
+}
+
+
+.min-main-sec-text-but-light{
+
+    background-color: var(--light3);
+ 
+ }
+ 
 
 
 .min-header-main-t{
