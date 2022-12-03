@@ -3,6 +3,7 @@
 import {ref} from 'vue';
 import {useRouter} from 'vue-router'
 
+
 let router = useRouter();
 
 let fashion = ()=>{
@@ -17,6 +18,15 @@ let fashion = ()=>{
 let tech = ()=>{
 
 localStorage.setItem('header_label','tech');
+router.push('/');
+return;
+
+}
+
+
+let furn = ()=>{
+
+localStorage.setItem('header_label','frun');
 router.push('/');
 return;
 
@@ -456,6 +466,7 @@ let change_grid = type => {
   
   </div>
 
+  <button @click="fashion()" class="see-more">See more</button>
 
 
 
@@ -468,9 +479,12 @@ let change_grid = type => {
     <div class="larget2"></div>
     <div class="larget3"></div>
     <div class="larget4"></div>
+    <div class="larget5"></div>
+    <div class="smallt"></div>
      
 </div>
   
+<button @click="tech()" class="see-more">See more</button>
 
 
 <label :class="`gird-title min gird-title-`+theme" for="">all computer equipments:</label>
@@ -481,32 +495,13 @@ let change_grid = type => {
   <div class="h1"></div>
   <div class="l1"></div>
   <div class="l2"></div>
+  <div class="l3"></div>
    
 </div>
 
-
-  <label :class="`gird-title min gird-title-`+theme" for="">all computer equipments:</label>
-
+<button @click="furn()" class="see-more">See more</button>
 
   
-  <div :class="`min min-header-grid gird1-main-min-t`">
-
-    <div class="small"></div>
-    <div class="small2"></div>
-    
-    <div class="large"></div>
-    
-    </div>
-    
-    
-    
-    <div :class="`min min-header-grid2 gird2-main-min-t`">
-    
-      <div class="small"></div>  
-      <div class="large"></div>
-      
-      </div>
-    
 
 
 <div class="grid-buttns max">
@@ -598,6 +593,19 @@ let change_grid = type => {
 
 
 </div>
+
+
+<div class="fa-3x">
+  <i class="fa-solid fa-basketball fa-bounce"></i>
+  <i class="fa-solid fa-volleyball fa-bounce"></i>
+
+  <!-- bounce animation with no "squish" -->
+  <i class="fa-solid fa-frog fa-bounce" style=" --fa-bounce-start-scale-x: 1; --fa-bounce-start-scale-y: 1; --fa-bounce-jump-scale-x: 1; --fa-bounce-jump-scale-y: 1; --fa-bounce-land-scale-x: 1; --fa-bounce-land-scale-y: 1; " ></i>
+
+  <!-- bounce animation with no "squish" or "rebound" -->
+  <i class="fa-solid fa-envelope fa-bounce" style=" --fa-bounce-start-scale-x: 1; --fa-bounce-start-scale-y: 1; --fa-bounce-jump-scale-x: 1; --fa-bounce-jump-scale-y: 1; --fa-bounce-land-scale-x: 1; --fa-bounce-land-scale-y: 1; --fa-bounce-rebound: 0;" ></i>
+</div>
+
 </template>
   
 

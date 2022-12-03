@@ -188,6 +188,7 @@ height: 50vh;
     outline:none;
     padding: 1rem;
     border-radius: 5px;
+    margin-top: 2rem;
     background-color: rgb(255, 255, 255);
     transition: 0.3s ease-in-out;
 }
@@ -526,16 +527,36 @@ text-decoration: none;
 
 .min-header-grid-t{
     width: 100vw;
-    height: 40vh;
+    height: 60vh;
     display: grid;
     margin:0 0 0 0;
     padding: 0 0 0 0;
     grid-template-columns: 25vw 25vw 25vw 25vw;
     grid-template-areas:
     'larget larget larget2 larget2'
-    'larget larget larget3 larget4';
+    'larget larget larget3 larget4'
+    'smallt larget5 larget5 larget5';
 
 }
+
+
+.min-header-grid-t .smallt{
+
+    grid-area: smallt;
+    background: url('https://c0.wallpaperflare.com/preview/325/23/780/backlit-blur-close-up-dark-thumbnail.jpg');
+    background-size: cover;
+    background-position:center;
+}
+
+
+.min-header-grid-t .larget5{
+    grid-area: larget5;
+    background: url('https://digitalmagazine.org/wp-content/uploads/2022/06/How-To-Set-Different-Wallpapers-On-Dual-Monitors-Windows-10.jpg');
+    background-size: cover;
+    background-position:center;
+
+}
+
 
 .min-header-grid-t .larget{
     grid-area: larget;
@@ -568,12 +589,14 @@ text-decoration: none;
 
 .min-header-grid-ff{
     display: grid;
+    height: 60vh;
     margin:0 0 0 0;
     padding: 0 0 0 0;
     grid-template-columns:60vw 40vw ;
     grid-template-areas:
     'l1 h1'
     'l2 h1'
+    'l3 l3'
 
 }
 
@@ -588,21 +611,24 @@ text-decoration: none;
 
 .min-header-grid-ff .l1{
     grid-area: l1;
-    height: 30vh;
-    background: url('http://cdn.home-designing.com/wp-content/uploads/2021/04/full-length-beveled-mirror-glam-decor-inspiration-rectangular-shape-includes-stand-freestanding-mirror-with-hangers-600x780.jpg');
+    background: url('https://cdn.grbj.com/wp-content/uploads/sites/143/2020/09/Loves-Furniture.jpeg');
     background-size: cover;
     background-position:center;
 }
 
 .min-header-grid-ff .l2{
     grid-area: l2;
-    height: 20vh;
     background: url('https://elledecor.in/wp-content/uploads/2022/03/H6_KIDS-ROOM.jpg');
     background-size: cover;
     background-position:center;
 }
 
-
+.min-header-grid-ff .l3{
+    grid-area: l3;
+    background: url('https://www.riverpoolsandspas.com/hubfs/in-pool%20furniture%20tanning%20ledge%20chairs.jpg');
+    background-size: cover;
+    background-position:center;
+}
 
 .min-header-grid2{
     width: 100vw;
@@ -831,6 +857,16 @@ margin-top: 3rem;
 .gird-title-dark{
     color:white;
 }
+
+.see-more{
+    margin-left: 1rem;
+    margin-top: 2rem;
+    outline: none;
+    border: none;
+    padding: .5rem;
+    border-radius: 9px;
+}
+
 
 .max{
     display: none;

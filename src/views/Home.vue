@@ -978,6 +978,10 @@ let start = ()=>{
       fashion();
       return;
     }
+    if(lab==='frun'){
+      frun();
+      return;
+    }
     tech();
     return;
   }
@@ -1140,7 +1144,7 @@ let dis_rating = (rating)=>{
             <div :class="`main-flex2 d-flex justify-content-between main-flex2-`+all">
 
               
-              <button v-if="token!=null" type="button" :class="button+` button1`" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              <button  type="button" :class="button+` button1`" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <ion-icon name="cart-outline" class="cart-icon"></ion-icon> 
                 <label v-if="count>0" class="count-label">{{count}}</label>
                 </button>
