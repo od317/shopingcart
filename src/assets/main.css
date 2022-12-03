@@ -524,6 +524,84 @@ text-decoration: none;
     'small2 large large large';
 } 
 
+.min-header-grid-t{
+    width: 100vw;
+    height: 40vh;
+    display: grid;
+    margin:0 0 0 0;
+    padding: 0 0 0 0;
+    grid-template-columns: 25vw 25vw 25vw 25vw;
+    grid-template-areas:
+    'larget larget larget2 larget2'
+    'larget larget larget3 larget4';
+
+}
+
+.min-header-grid-t .larget{
+    grid-area: larget;
+    background: url('https://thumbs.dreamstime.com/b/gaming-pc-rgb-led-lights-computer-assembled-hardware-components-rgb-colors-gaming-computer-185705787.jpg');
+    background-size: cover;
+    background-position:center;
+}
+
+.min-header-grid-t .larget2{
+    grid-area: larget2;
+    background: url('https://globalcomputers.pk/wp-content/uploads/2021/09/michelle-ding-c7yBhz9XTIs-unsplash.jpg');
+    background-size: cover;
+    background-position:center;
+}
+
+.min-header-grid-t .larget3{
+    grid-area: larget3;
+    background: url('https://m.media-amazon.com/images/S/mms-media-storage-prod/final/BrandPosts/brandPosts/348ca1ef-5e30-410a-861e-961fc2a6e979/396600aa-6cff-4c84-82cb-a2a020b6c98b/media._SL480_.jpeg');
+    background-size: cover;
+    background-position:center;
+}
+
+.min-header-grid-t .larget4{
+    grid-area: larget4;
+    background: url('https://i.ytimg.com/vi/YwdvV0EYRpg/maxresdefault.jpg');
+    background-size: cover;
+    background-position:center;
+}
+
+
+.min-header-grid-ff{
+    display: grid;
+    margin:0 0 0 0;
+    padding: 0 0 0 0;
+    grid-template-columns:60vw 40vw ;
+    grid-template-areas:
+    'l1 h1'
+    'l2 h1'
+
+}
+
+.min-header-grid-ff .h1{
+    grid-area: h1;
+    height: 100%;
+    background: url('https://i.etsystatic.com/24030939/r/il/ecbfe8/4007497222/il_fullxfull.4007497222_foxs.jpg');
+    background-size: cover;
+    background-position:right;
+}
+
+
+.min-header-grid-ff .l1{
+    grid-area: l1;
+    height: 30vh;
+    background: url('http://cdn.home-designing.com/wp-content/uploads/2021/04/full-length-beveled-mirror-glam-decor-inspiration-rectangular-shape-includes-stand-freestanding-mirror-with-hangers-600x780.jpg');
+    background-size: cover;
+    background-position:center;
+}
+
+.min-header-grid-ff .l2{
+    grid-area: l2;
+    height: 20vh;
+    background: url('https://elledecor.in/wp-content/uploads/2022/03/H6_KIDS-ROOM.jpg');
+    background-size: cover;
+    background-position:center;
+}
+
 
 
 .min-header-grid2{
@@ -742,8 +820,10 @@ margin-top: 3rem;
 
 .gird-title{
  margin-left: .5rem;
- margin-bottom: 1rem;
- font-size: 1.3rem;
+ margin-top: 3rem;
+ margin-bottom:1rem;
+ font-size: 1.5rem;
+ padding: .5rem;
  color:black;
 }
 

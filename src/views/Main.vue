@@ -462,6 +462,32 @@ let change_grid = type => {
   <label :class="`gird-title min gird-title-`+theme" for="">all computer equipments:</label>
 
 
+<div class="min min-header-grid-t">
+  
+    <div class="larget"></div>
+    <div class="larget2"></div>
+    <div class="larget3"></div>
+    <div class="larget4"></div>
+     
+</div>
+  
+
+
+<label :class="`gird-title min gird-title-`+theme" for="">all computer equipments:</label>
+
+
+<div class="min min-header-grid-ff">
+  
+  <div class="h1"></div>
+  <div class="l1"></div>
+  <div class="l2"></div>
+   
+</div>
+
+
+  <label :class="`gird-title min gird-title-`+theme" for="">all computer equipments:</label>
+
+
   
   <div :class="`min min-header-grid gird1-main-min-t`">
 
