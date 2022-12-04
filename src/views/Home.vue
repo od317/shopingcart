@@ -1228,7 +1228,11 @@ let dis_rating = (rating)=>{
 
        <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
          <div :class="`offcanvas-header offcanvas-header-`+all">
-           <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Offcanvas with body scrolling</h5>
+           <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+            <ion-icon name="bag-handle-outline" class="cart-icon-min"></ion-icon>
+            <br>
+             Sort and Filters
+           </h5>
            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
          </div>
          <div :class="`offcanvas-body offcanvas-body-`+all">
@@ -1237,7 +1241,7 @@ let dis_rating = (rating)=>{
 
          
             <div :class="`filter-container-min `+border_theme">
-             <label for="" :class="`sort-by  filter-color-`+circle_theme">sort by</label> <br>
+             <label for="" :class="`sort-by  filter-color-`+circle_theme">sort by</label>
              <div class="filter-min"><label :class="`filter-color-`+circle_theme" for="" @click="filter('laptops',0,'reco')">
                <ion-icon v-if="filters[0]==='none'" name="ellipse-outline" class=""></ion-icon>
                <ion-icon v-if="filters[0]!=='none'" name="ellipse" :class="`filled-circel-`+circle_theme"></ion-icon>Recomended</label>
@@ -1275,7 +1279,7 @@ let dis_rating = (rating)=>{
      
      
             <div :class="`filter-container-min `+border_theme">
-             <label for="" :class="`sort-by filter-color-`+circle_theme">Filters </label> <br>
+             <label for="" :class="`sort-by filter-color-`+circle_theme">Filters </label> 
              <div v-for="p in filterss" class="filter-min"><label :class="`filter-color-`+circle_theme" for="" @click="p.func(p.name,p.num)">
                <ion-icon v-if="filters2[p.num]==='none'" name="square-outline" class=""></ion-icon>
                <ion-icon v-if="filters2[p.num]!=='none'" name="square" :class="`filled-circel-`+circle_theme"></ion-icon>{{p.name}}</label>

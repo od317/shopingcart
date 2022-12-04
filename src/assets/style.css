@@ -1155,9 +1155,11 @@ margin-right: .5rem;
 }
 
 
+
+
 .filter-container-min{
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns:100%;
   padding-bottom: 2rem;
   width: 55vw;
   overflow-x: hidden;
@@ -1192,6 +1194,17 @@ margin-right: .5rem;
   margin-right: 1rem;
   color: white;
 }
+
+.offcanvas-title .cart-icon-min{
+  color:white;
+  background: transparent;
+  font-size: 2rem;
+  padding-left: 0;
+}
+
+
+
+
 
   .max{
     display:none;
