@@ -1274,9 +1274,9 @@ let dis_rating = (rating)=>{
      
      
      
-            <div :class="`filter-container `+border_theme">
-             <label for="" :class="`sort-by filter-color-`+circle_theme">Filter </label>
-             <div v-for="p in filterss" class="filter"><label :class="`filter-color-`+circle_theme" for="" @click="p.func(p.name,p.num)">
+            <div :class="`filter-container-min `+border_theme">
+             <label for="" :class="`sort-by filter-color-`+circle_theme">Filters </label> <br>
+             <div v-for="p in filterss" class="filter-min"><label :class="`filter-color-`+circle_theme" for="" @click="p.func(p.name,p.num)">
                <ion-icon v-if="filters2[p.num]==='none'" name="square-outline" class=""></ion-icon>
                <ion-icon v-if="filters2[p.num]!=='none'" name="square" :class="`filled-circel-`+circle_theme"></ion-icon>{{p.name}}</label>
              </div>

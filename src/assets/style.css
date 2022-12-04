@@ -1031,6 +1031,7 @@ margin-right: .5rem;
 .search-contc{
   transition: .5s ease-in-out;
   display: flex;
+  width: 100%;
 }
 
 
@@ -1044,6 +1045,7 @@ margin-right: .5rem;
 }
 
 .search-contc input{
+  width:50%;
   font-size: 1.3rem;
   border: none;
   border-radius: 0 10px 10px 0 ;
@@ -1085,7 +1087,7 @@ margin-right: .5rem;
 .button2-min{
   background-color: transparent;
   color: white;
-  margin-left: 1rem;
+  margin-left: .2rem;
   outline: none;
   border: none;
   font-size: 1.2rem;
@@ -1093,7 +1095,8 @@ margin-right: .5rem;
 
 
 .offcanvas .offcanvas-body ,.offcanvas-header,.offcanvas-start{
-  width: 50vw;
+  width: 60vw;
+  overflow-x: hidden;
   background-color:transparent;
 }
 
@@ -1155,6 +1158,9 @@ margin-right: .5rem;
 .filter-container-min{
   display: grid;
   grid-template-columns: 50% 50%;
+  padding-bottom: 2rem;
+  width: 55vw;
+  overflow-x: hidden;
 }
 
 .filter-min ion-icon{
@@ -1163,12 +1169,14 @@ margin-right: .5rem;
   margin: 0;
   padding: 0;
   font-size: .7rem;
+  margin-right: .2rem;
 }
 
 
 
 .filter-min label{
   font-size: .8rem;
+  margin-right: 1rem;
 }
 
   .max{
