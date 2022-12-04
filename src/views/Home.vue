@@ -1069,7 +1069,7 @@ let dis_rating = (rating)=>{
             <div class="main-flex d-flex justify-content-center">
 
               <label   :class="button+` button1 button2`" data-bs-toggle="modal" >
-                <router-link to="main" class="logo_main">
+                <router-link to="/" class="logo_main">
                 <ion-icon name="bag-handle-outline" class="cart-icon"></ion-icon>
               </router-link>
               </label>
@@ -1144,12 +1144,16 @@ let dis_rating = (rating)=>{
             <div :class="`main-flex2 d-flex justify-content-between main-flex2-`+all">
 
               
-              <button  type="button" :class="button+` button1`" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                <ion-icon name="cart-outline" class="cart-icon"></ion-icon> 
+              <button  v-if="!token===null" type="button" :class="button+` button1`" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                <ion-icon  name="cart-outline" class="cart-icon"></ion-icon>
                 <label v-if="count>0" class="count-label">{{count}}</label>
                 </button>
 
-
+                <button v-if="token==null" type="button" :class="button+` button2-min `">
+                  <router-link to="/login" :class="`login_butt_main login_butt_main`+all">
+                   login
+                  </router-link>
+                </button>
 
               <label  @click="tech" :class="button+` button1 button2`"  >
                 <label class="logo_main">
@@ -1191,7 +1195,7 @@ let dis_rating = (rating)=>{
       <div class="min-header min">
         <div class="min-header-cont">
         <label   :class="button+` button1 button2`" >
-          <router-link to="main" class="logo_main">
+          <router-link to="/" class="logo_main">
           <ion-icon name="bag-handle-outline" class="cart-icon"></ion-icon>
         </router-link>
         </label>
@@ -1217,10 +1221,24 @@ let dis_rating = (rating)=>{
       <div class="search-contc">
       <ion-icon name="search-outline"></ion-icon>
        <input  type="text">
+
+       <button :class="`filters-min-butt filters-min-butt-`+all" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+        <ion-icon name="filter-outline"></ion-icon>
+      </button>
+
+       <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+         <div :class="`offcanvas-header offcanvas-header-`+all">
+           <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Offcanvas with body scrolling</h5>
+           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+         </div>
+         <div :class="`offcanvas-body offcanvas-body-`+all">
+           <p>Try scrolling the rest of the page to see this option in action.</p>
+         </div>
+       </div>
+   
+
       </div>
     </div>
-
-
 
 
     <div class="min b-cards">
@@ -1393,7 +1411,6 @@ let dis_rating = (rating)=>{
 
 
 </div>
-
 
 
 

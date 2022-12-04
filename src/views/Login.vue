@@ -55,7 +55,7 @@ t.value = localStorage.getItem('theme')||'light';
     <main :class="`login_main login_main_`">
         
 
-    <form :class="`login_from login_from_`+t" @submit.prevent="login">
+    <form :class="`max login_from login_from_`+t" @submit.prevent="login">
 
  
         <div class="form_header">
@@ -96,7 +96,48 @@ t.value = localStorage.getItem('theme')||'light';
     
     </form>
 
-<div class="login_sec">
+    <div class="min min-cont">
+
+    <form :class="` login_from login_from-min login_from_`+t" @submit.prevent="login">
+
+
+       <div class="form_h_text2">            
+        <router-link to="/"><ion-icon name="bag-handle-outline" :class="`form_icon form_icon_`+t"></ion-icon></router-link> 
+       </div>
+
+        <div class="input_div-min">
+            <br>
+            <label class="input-icon"><ion-icon name="bag-handle-outline" :class="`form_icon-min form_icon_`+t"></ion-icon></label>
+            <input type="email"
+            v-model="email" 
+            placeholder="email"/>
+        </div>
+
+
+        <div class="input_div-min">
+            <label class="input-icon"><ion-icon name="bag-handle-outline" :class="`form_icon-min form_icon_`+t"></ion-icon></label>
+            <input type="password" 
+            v-model="password" 
+            placeholder="********"/>
+        </div>
+
+        <input
+        :class="`login_button_`+t" 
+        type="submit" 
+        value="Login">
+
+        <footer :class="`f footer_`+t">
+            Dont have an ac? <router-link to="/register">Register</router-link>
+            <br>
+            <a :class="`google form_icon_`+t" href="https://test.stytch.com/v1/public/oauth/google/start?public_token=public-token-test-1714908c-17e4-45ad-8f8d-1be2b5d3c4d0"><ion-icon class="google" name="logo-google"></ion-icon></a>
+        </footer>
+    
+    </form>
+
+    </div>
+
+
+<div class="max login_sec">
 
     <div class="login_sec_text">Search and Buy online <br>
     from one of txte texte text <br>
@@ -120,6 +161,9 @@ t.value = localStorage.getItem('theme')||'light';
 ion-icon{
     color:var(--light5);
 }
+
+
+.min{display: none;}
 
 main{
     display:flex;
@@ -287,6 +331,81 @@ background-color:var(--light3);
 .f .google{
     margin-top: 1rem;
     font-size: 1.5rem;
+}
+
+
+@media only screen and (max-width:690px) {
+
+    .max{
+        display: none;
+    }
+    .min{
+        display: block;
+    }
+    .min-cont{
+        width:100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .min-cont form{
+        width: 100vw;
+    }
+
+    .form_h_text2{
+        margin-top: 50%;
+        font-size: 5rem;   
+       }
+
+       .input_div-min{
+        display: inline-block;
+        margin-bottom: 2rem;
+        width: 90%;
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .input_div-min .input-icon{
+        border-bottom: 1px solid white;
+        padding-top: 1rem;
+        height: 100%;
+        width: 10%;
+    }
+
+    .input_div-min .input-icon ion-icon{
+     margin-left: .5rem;
+    }
+
+    .input_div-min input{
+    width:80%;
+    border-radius: 0px;
+    border: none;
+    background-color:transparent;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+    padding:.5rem;
+    outline: none;
+ }   
+    
+    input[type="submit"]{
+        outline: none;
+        display: block;
+        font-size: 1.5rem;
+        color:black;
+        background-color: var(--light5);
+        border-radius: 0.5rem;
+        cursor:pointer;
+        transition: 0.2s ease;
+        border:none;
+        width: 80%;
+    }
+}
+
+.form-input{
+
 }
 
 </style>

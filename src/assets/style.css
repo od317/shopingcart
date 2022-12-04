@@ -1074,8 +1074,75 @@ margin-right: .5rem;
   background-color: var(--light1);
 }
 
-.b-cards{
-  
+.filters-butts-min{
+  border-radius: 100%;
+  width: 70px;
+  height: 70px;
+  font-size: 1.2rem;
+}
+
+
+.button2-min{
+  background-color: transparent;
+  color: white;
+  margin-left: 1rem;
+  outline: none;
+  border: none;
+  font-size: 1.2rem;
+}
+
+
+.offcanvas .offcanvas-body ,.offcanvas-header,.offcanvas-start{
+  width: 50vw;
+  background-color:transparent;
+}
+
+
+.filters-min-butt{
+  outline: none;
+  border:none;
+  margin-left: 1rem;
+  border-radius: 10px;
+  padding: 0 1rem 0 1rem;
+  color: white;
+
+}
+
+
+.filters-min-butt-dark{
+    background-color: #292929;
+}
+
+.filters-min-butt-light{
+  background-color: var(--light1);
+}
+
+
+.filters-min-butt ion-icon{
+  padding: 0;
+  color: white;
+  background-color: transparent;
+}
+
+.offcanvas .offcanvas-body-light,.offcanvas .offcanvas-header-light{
+
+  background-color: var(--light1);
+  color: white;
+
+}
+
+
+.offcanvas .offcanvas-body-dark,.offcanvas .offcanvas-header-dark{
+
+  background-color:var(--dark5);
+  color: white;
+
+}
+
+
+
+.offcanvas .offcanvas-header{
+
 }
 
   .max{

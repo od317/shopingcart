@@ -3,7 +3,7 @@ import {createRouter,createWebHistory} from 'vue-router';
 import { Carousel, Slide } from 'vue-carousel';
 
 const routes = [
-    { path:'/',
+    { path:'/main',
       name:'home',
       component:()=> import('./views/Home.vue')
     },
@@ -21,7 +21,7 @@ const routes = [
           requiresAuth:true
       }
     },
-    { path:'/main',
+    { path:'/',
       name:'main',
       component:()=> import('./views/Main.vue')
     }
@@ -38,7 +38,7 @@ router.beforeEach(async (to,from,next)=>{
    if(token==null){
        return next();
    }
-   return next('/main');
+   return next('/');
   }
   next();
 })

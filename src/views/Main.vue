@@ -9,7 +9,7 @@ let router = useRouter();
 let fashion = ()=>{
 
   localStorage.setItem('header_label','fashion');
-  router.push('/');
+  router.push('/main');
   return;
 
 }
@@ -18,7 +18,7 @@ let fashion = ()=>{
 let tech = ()=>{
 
 localStorage.setItem('header_label','tech');
-router.push('/');
+router.push('/main');
 return;
 
 }
@@ -27,7 +27,7 @@ return;
 let furn = ()=>{
 
 localStorage.setItem('header_label','frun');
-router.push('/');
+router.push('/main');
 return;
 
 }
@@ -44,7 +44,7 @@ let grid1 = [{
  src:"https://www.paylessfurnituretexas.com/www/clients/bestbuyhomefurnitureup/clientfiles/homePageAd_col-3-small/0380FBAA-5056-BF1C-1C44A2DAFC0BC5E3-0.jpeg",
  type:'frun'
 },{
- src:"https://c.dns-shop.ru/thumb/st1/fit/760/600/2766296abeb9fd5d4e923c7cbcf4e961/q93_4ee622606506ae82227708857e10990a9f7ff86dd9edffae17f6ff332b0dd46d.jpg",
+ src:"https://wallpaperaccess.com/full/899863.jpg",
  type:'tech'
 },{
  src:"https://8outfits.com/orig/0/36/368/3685/8outfits.com-hijabista-fashion-modest-fashion-368567.jpg",
@@ -53,7 +53,7 @@ let grid1 = [{
  src:"https://paramountbathrooms.co.uk/wp-content/uploads/Gallio-Supermatt-Marine-Blue-1-1024x724.jpg",
  type:'frun'
 },{
- src:"https://media.karousell.com/media/photos/products/2020/02/27/glorious_model_o_rgb_gaming_mouse_1582813513_2d3f342eb_progressive",
+ src:"https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc3/Original_Xiaomi_Gaming_Mouse_Lite_YXSB01YM_5_Gear_DPI_TTC_Clicking_RGB_Ambient_Light_72g_Body.jpg_1000x1000.jpg",
  type:'tech'
 },{
   src:"https://i.pinimg.com/736x/f6/1d/f9/f61df9c12b4b5e6ccb4cce0ee84580e0.jpg",
@@ -64,6 +64,15 @@ let grid1 = [{
 },{
   src:'https://media.istockphoto.com/id/1259705254/photo/stylish-fashionable-blonde-woman-with-smoky-eye-makeup-in-jeans-white-t-shirt-and-black.jpg?s=612x612&w=0&k=20&c=jsfMFnIiaVZdxPg933bLGn1J3RVqqzFhycWeY0ZBJ18=',
   type:'fashion'
+},{
+  src:"https://pbs.twimg.com/media/FdMUPRVXkAAusYv.jpg",
+  type:'tech'
+},{
+  src:"https://cdn.narellanpools.com.au/wp-content/uploads/2020/03/11-decorating-and-furniture-01.jpg",
+  type:'frun'
+},{
+  src:"https://i.pinimg.com/originals/4f/79/90/4f799057143aa8c9025ac7d90748e8c3.jpg",
+  type:'frun'
 }];
 
 
@@ -95,6 +104,15 @@ let grid2 = [{
 },{
   src:'https://www.mychicobsession.com/wp-content/uploads/2020/11/classic-style-fall-fashion-15-of-57-1600x2400.jpg',
   type:'fashion'
+},{
+  src:"https://super.homelane.com/prodsnew/HLKT0000072.jpg",
+  type:'frun'
+},{
+  src:'https://www.duravit.com/dimg/6046810_web_mil_zoom.jpg',
+  type:'frun'
+},{
+  src:'https://www.huset.com.au/uploads/thumbnail2/jpg/blog_txt_img/145/878x878/uploads/blog/145/modern-furniture.jpg',
+  type:'frun'
 }];
 
 
@@ -124,6 +142,12 @@ let grid3 = [{
 },{
   src:'https://i.pinimg.com/736x/d9/87/82/d987823feadc75635e60162c98574489.jpg',
   type:'fashion'
+},{
+  src:"https://c0.wallpaperflare.com/preview/356/29/266/apple-dark-macbook-pro.jpg",
+  type:'tech'
+},{
+  src:"https://images.hindustantimes.com/tech/img/2022/04/15/1600x900/IMG_3325_1648798858723_1649998363775.jpg",
+  type:'tech'
 }];
 
 
@@ -157,6 +181,18 @@ let grid4 = [{
 },{
   src:'https://images.squarespace-cdn.com/content/v1/6042a94f08e8ab42a10b9a95/1617577123610-Y8B5RMHU88W0O0LNLJ5P/unsplash-image-gaIaLZO9q1I.jpg',
   type:'fashion'
+},{
+  src:'https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/480/public/media/image/2022/01/xbox-series-x-2579481.jpg?itok=nrs5jHbh',
+  type:'tech'
+},{
+  src:'https://i.pinimg.com/originals/61/6a/a2/616aa21d4f44219df85b108db22bfe0a.png',
+  type:'frun'
+},{
+  src:'https://media.norwalkfurniture.com/wysiwyg/Colton_Wilson-moble-home-page.jpg',
+  type:'frun'
+},{
+  src:'https://img1.homary.com/filters:format(webp)/mall/file/2022/05/06/52930fbf32a04a989fc8dbd5eb260373.jpg',
+  type:'frun'
 }];
 
 
@@ -287,7 +323,7 @@ let change_grid = type => {
           <div class="flex-grow-1 sec-flex d-flex ">
             <label class="flex-item nav-link" @click="tech">tech</label>
             <label class="flex-item nav-link" @click="fashion">fashion</label>
-            <label class="flex-item nav-link" @click="frun">somthing</label>
+            <label class="flex-item nav-link" @click="furn">furn</label>
         </div>
 
         
@@ -402,7 +438,7 @@ let change_grid = type => {
 <div class="min-header min">
   <div class="min-header-cont">
   <label   :class="button+` button1 button2`" >
-    <router-link to="/" class="logo_main">
+    <router-link to="/main" class="logo_main">
     <ion-icon name="basket-outline" class="cart-icon"></ion-icon>
   </router-link>
   </label>
@@ -466,7 +502,7 @@ let change_grid = type => {
   
   </div>
 
-  <button @click="fashion()" class="see-more">See more</button>
+  <button @click="fashion()" class="see-more min" >See more</button>
 
 
 
@@ -484,7 +520,7 @@ let change_grid = type => {
      
 </div>
   
-<button @click="tech()" class="see-more">See more</button>
+<button @click="tech()" class="see-more min">See more</button>
 
 
 <label :class="`gird-title min gird-title-`+theme" for="">all computer equipments:</label>
@@ -499,7 +535,7 @@ let change_grid = type => {
    
 </div>
 
-<button @click="furn()" class="see-more">See more</button>
+<button @click="furn()" class="see-more min">See more</button>
 
   
 
