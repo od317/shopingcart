@@ -1101,7 +1101,7 @@ margin-right: .5rem;
 .filters-min-butt{
   outline: none;
   border:none;
-  margin-left: 1rem;
+  margin-left: .8rem;
   border-radius: 10px;
   padding: 0 1rem 0 1rem;
   color: white;
@@ -1139,10 +1139,36 @@ margin-right: .5rem;
 
 }
 
+.offcanvas{
+  height: 100vh;
+}
+
+.offcanvas .offcanvas-body{
+
+}
 
 
 .offcanvas .offcanvas-header{
+}
 
+
+.filter-container-min{
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.filter-min ion-icon{
+
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  font-size: .7rem;
+}
+
+
+
+.filter-min label{
+  font-size: .8rem;
 }
 
   .max{

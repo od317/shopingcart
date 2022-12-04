@@ -466,7 +466,7 @@ let change_grid = type => {
 <div class="but-text-cont min">
   <label class="large-text">find product with best <span class="color">prices</span></label>
   <label class="small-text">tech,fashion,furn you can find any product you want when ever you want where ever you are</label>
-  <router-link to="/" class="link">Store</router-link>
+  <router-link to="/main" class="link">Store</router-link>
 </div>
 
 
@@ -625,7 +625,7 @@ let change_grid = type => {
 
 </div>
 
-<div :class="`main-footer main-footer-`+theme"><router-link to="/" :class="`link `">Go to store</router-link></div>
+<div :class="`main-footer main-footer-`+theme"><router-link to="/main" :class="`link `">Go to store</router-link></div>
 
 
 </div>

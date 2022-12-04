@@ -1232,13 +1232,70 @@ let dis_rating = (rating)=>{
            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
          </div>
          <div :class="`offcanvas-body offcanvas-body-`+all">
-           <p>Try scrolling the rest of the page to see this option in action.</p>
+        
+
+
+         
+            <div :class="`filter-container-min `+border_theme">
+             <label for="" :class="`sort-by  filter-color-`+circle_theme">sort by</label> <br>
+             <div class="filter-min"><label :class="`filter-color-`+circle_theme" for="" @click="filter('laptops',0,'reco')">
+               <ion-icon v-if="filters[0]==='none'" name="ellipse-outline" class=""></ion-icon>
+               <ion-icon v-if="filters[0]!=='none'" name="ellipse" :class="`filled-circel-`+circle_theme"></ion-icon>Recomended</label>
+             </div>
+           
+             <div class="filter-min"><label :class="`filter-color-`+circle_theme" for="" @click="filter('laptops',1,'hight')">
+               <ion-icon v-if="filters[1]==='none'" name="ellipse-outline" class=""></ion-icon>
+               <ion-icon v-if="filters[1]!=='none'" name="ellipse" :class="`filled-circel-`+circle_theme"></ion-icon>Hight-end</label>
+             </div>
+           
+             <div class="filter-min"><label :class="`filter-color-`+circle_theme" for="" @click="filter('laptops',2,'low')">
+               <ion-icon v-if="filters[2]==='none'" name="ellipse-outline" class=""></ion-icon>
+               <ion-icon v-if="filters[2]!=='none'" name="ellipse" :class="`filled-circel-`+circle_theme"></ion-icon>Low-end</label>
+             </div>
+           
+             <div class="filter-min"><label :class="`filter-color-`+circle_theme" for="" @click="filter('laptops',3,'date')">
+               <ion-icon v-if="filters[3]==='none'" name="ellipse-outline" class=""></ion-icon>
+               <ion-icon v-if="filters[3]!=='none'" name="ellipse" :class="`filled-circel-`+circle_theme"></ion-icon>New</label>
+             </div>
+           
+             <div class="filter-min"><label :class="`filter-color-`+circle_theme" for="" @click="filter('laptops',4,'rating')">
+               <ion-icon v-if="filters[4]==='none'" name="ellipse-outline" class=""></ion-icon>
+               <ion-icon v-if="filters[4]!=='none'" name="ellipse" :class="`filled-circel-`+circle_theme"></ion-icon>Rating</label>
+             </div>
+           
+             <div class="filter-min"><label :class="`filter-color-`+circle_theme" for="" @click="filter('laptops',5)">
+               <ion-icon v-if="filters[5]==='none'" name="ellipse-outline" class=""></ion-icon>
+               <ion-icon v-if="filters[5]!=='none'" name="ellipse" :class="`filled-circel-`+circle_theme"></ion-icon>shaker</label>
+             </div>
+     
+            </div>
+     
+         
+     
+     
+     
+            <div :class="`filter-container `+border_theme">
+             <label for="" :class="`sort-by filter-color-`+circle_theme">Filter </label>
+             <div v-for="p in filterss" class="filter"><label :class="`filter-color-`+circle_theme" for="" @click="p.func(p.name,p.num)">
+               <ion-icon v-if="filters2[p.num]==='none'" name="square-outline" class=""></ion-icon>
+               <ion-icon v-if="filters2[p.num]!=='none'" name="square" :class="`filled-circel-`+circle_theme"></ion-icon>{{p.name}}</label>
+             </div>
+            </div>
+     
+     
+     
+          
+     
+     
+    
+     </div>
+
+
          </div>
        </div>
    
 
       </div>
-    </div>
 
 
     <div class="min b-cards">
