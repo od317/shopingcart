@@ -375,7 +375,7 @@ body{
   }
 
   .alllight{
-    background-color:var(--light4);
+    background-color:var(--light3);
 }
 
 
@@ -843,7 +843,7 @@ background-color: var(--dark4);
 
 
   .imgh2-light{
-    background-color: var(--light4);
+    background-color: var(--light3);
   }
 
   .main-flex2-dark{
@@ -851,7 +851,7 @@ background-color: var(--dark4);
   }
 
   .main-flex2-light{
-    background-color: var(--light5);
+    background-color: var(--light1);
   }
 
 
@@ -953,7 +953,7 @@ background-color: var(--dark4);
 }
 
 .min-img-home-light{
-  background-color:var(--light4);
+  background-color:var(--light3);
 }
 
 
@@ -1032,6 +1032,8 @@ margin-right: .5rem;
   transition: .5s ease-in-out;
   display: flex;
   width: 100%;
+    transition: 0.5s ease-in-out;
+
 }
 
 
@@ -1042,6 +1044,7 @@ margin-right: .5rem;
   border-radius: 10px 0 0 10px ;
   outline: none;
   border: none;
+
 }
 
 .search-contc input{
@@ -1057,23 +1060,28 @@ margin-right: .5rem;
 .search-cont-dark ion-icon{
     color:black;
     background-color: white;
+
 }
 
 .search-cont-dark{
   background-color: var(--dark2);
+  transition: 0.5s ease-in-out;
   
 }
 
 .search-cont-light{
-  background-color: var(--light4);
+  background-color: var(--light3);
 }
 
 .search-cont-light .search-contc ion-icon{
   background-color: var(--light1);
+  color: white;
+
 }
 
 .search-cont-light .search-contc input{
   background-color: var(--light1);
+
 }
 
 .filters-butts-min{
@@ -1147,11 +1155,12 @@ margin-right: .5rem;
 }
 
 .offcanvas .offcanvas-body{
-
+  box-shadow: none, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 
 .offcanvas .offcanvas-header{
+  box-shadow:none, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 
@@ -1203,7 +1212,9 @@ margin-right: .5rem;
 }
 
 
-
+.sort-by{
+  color:white;
+}
 
 
   .max{

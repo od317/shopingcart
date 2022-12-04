@@ -118,7 +118,7 @@ t.value = localStorage.getItem('theme')||'light';
             <router-link to="/"><ion-icon name="bag-handle-outline" :class="`form_icon form_icon_`+t"></ion-icon></router-link> 
            </div>
     
-            <div class="input_div-min">
+            <div :class="`input_div-min input_div-min-`+t">
                 <br>
                 <label class="input-icon"><ion-icon name="bag-handle-outline" :class="`form_icon-min form_icon_`+t"></ion-icon></label>
                 <input type="email"
@@ -127,14 +127,14 @@ t.value = localStorage.getItem('theme')||'light';
             </div>
     
     
-            <div class="input_div-min">
+            <div :class="`input_div-min input_div-min-`+t">
                 <label class="input-icon"><ion-icon name="bag-handle-outline" :class="`form_icon-min form_icon_`+t"></ion-icon></label>
                 <input type="password" 
                 v-model="password" 
                 placeholder="password"/>
             </div>
     
-            <div class="input_div-min">
+            <div :class="`input_div-min input_div-min-`+t">
                 <label class="input-icon"><ion-icon name="bag-handle-outline" :class="`form_icon-min form_icon_`+t"></ion-icon></label>
                 <input type="password" 
                 v-model="conf_password" 
@@ -318,9 +318,8 @@ background-color:var(--light3);
 
 
 
-
 .login_from_light{
-    background:var(--light4);
+    background:var(--light3);
 }
 
 .login_from_dark{
@@ -332,9 +331,21 @@ background-color:var(--light3);
     background-color:white;
 }
 
+
+.login_from_light .login_button_light{
+    background-color:var(--light1);
+    color:white;
+}
+
+
 .login_from_dark .login_button_dark:hover{
     background-color:var(--dark5);
     color:white;
+}
+
+.login_from_light .login_button_light:hover{
+    background-color:var(--light4);
+    color:black;
 }
 
 
@@ -350,8 +361,14 @@ background-color:var(--light3);
 .footer_dark ion-icon{
     color:white;
 }
+.footer_light ion-icon{
+    color:var(--light2);
+}
 
 
+.form_icon_light{
+    color:var(--light2);
+}
 .f .google{
     margin-top: 1rem;
     font-size: 1.5rem;
@@ -379,7 +396,7 @@ background-color:var(--light3);
     }
 
     .form_h_text2{
-        margin-top: 50%;
+        margin-top: 20%;
         font-size: 5rem;   
        }
 
@@ -415,6 +432,16 @@ background-color:var(--light3);
     outline: none;
  }   
     
+ .input_div-min-light .input-icon{
+    border-bottom: 1px solid var(--light2);
+}
+ .input_div-min-light input {
+    
+    border-bottom: 1px solid  var(--light2);
+    border-left: 1px solid var(--light2);
+    
+ }
+
     input[type="submit"]{
         outline: none;
         display: block;

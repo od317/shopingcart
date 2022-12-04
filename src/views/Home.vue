@@ -1223,7 +1223,7 @@ let dis_rating = (rating)=>{
        <input  type="text">
 
        <button :class="`filters-min-butt filters-min-butt-`+all" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
-        <ion-icon name="filter-outline"></ion-icon>
+        <ion-icon class="filter-outline" name="filter-outline"></ion-icon>
       </button>
 
        <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
