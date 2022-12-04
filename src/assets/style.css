@@ -1170,13 +1170,27 @@ margin-right: .5rem;
   padding: 0;
   font-size: .7rem;
   margin-right: .2rem;
+  color: white;
+  
 }
 
+
+.filter-min .filled-circel-dark{
+
+  color: white;
+
+}
+
+.filter-min .filled-circel-light{
+  color: white;
+
+}
 
 
 .filter-min label{
   font-size: .8rem;
   margin-right: 1rem;
+  color: white;
 }
 
   .max{
