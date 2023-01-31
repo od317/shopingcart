@@ -481,7 +481,7 @@ let change_grid = type => {
 </div>
 -->
 
-<label :class="`gird-title min gird-title-`+theme" for="">all computer equipments:</label>
+<label :class="`gird-title min gird-title-`+theme" for="">New style list :</label>
 
 
 <div :class="`min min-header-grid gird1-main-min-f  `">
@@ -506,7 +506,7 @@ let change_grid = type => {
 
 
 
-  <label :class="`gird-title min gird-title-`+theme" for="">all computer equipments:</label>
+  <label :class="`gird-title min gird-title-`+theme" for="">all tech equipments :</label>
 
 
 <div class="min min-header-grid-t">
@@ -523,7 +523,7 @@ let change_grid = type => {
 <button @click="tech()" class="see-more min">See more</button>
 
 
-<label :class="`gird-title min gird-title-`+theme" for="">all computer equipments:</label>
+<label :class="`gird-title min gird-title-`+theme" for="">modren frun design :</label>
 
 
 <div class="min min-header-grid-ff">

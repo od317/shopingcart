@@ -5,7 +5,7 @@
 --light2:var(--light1);
 --light3:#DEBACE;
 --light4:#ffffff;
---light5:#A03C78;
+--light5:#e3a4fa;
 
 
 
@@ -207,7 +207,7 @@ body{
   
   
   .card-light{
-  background-color:var(--light3);
+  background-color:var(--light5);
   }
   
   
@@ -297,7 +297,7 @@ body{
 }
   
   .side-light{
-    background-color:var(--light3);
+    background-color:var(--light5);
     
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   }
@@ -444,7 +444,7 @@ select{
   justify-content:center;
   font-size: 2rem;
   margin-left: 9%;
-
+  
 } 
 
 .view_more{
@@ -453,6 +453,7 @@ select{
    font-size: 1.2rem;
    padding: .4rem;
    border-radius: 5px;
+   margin-bottom: 2rem;
   }
 
 .page-num{
@@ -635,7 +636,9 @@ background-color: var(--dark4);
   transition: 0.5s ease-in-out;
 
 }
-
+.login_butt_maindark{
+  color:black;
+}
 .login_butt_main:hover{
 
   color:white;
@@ -680,7 +683,7 @@ background-color: var(--dark4);
 
 .disc_cont .disc-light{
   color:black;
-  background-color:var(--light3);
+  background-color:var(--light5);
 }
 
 
@@ -806,7 +809,7 @@ background-color: var(--dark4);
     font-size:90%;
   }
   .view_more{
-    margin-bottom: 5rem;
+    margin-bottom: 7rem;
   }
   .min-theme-dark{
     transition: 0.5s ease-in-out;

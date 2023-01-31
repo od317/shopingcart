@@ -479,9 +479,10 @@ else{
 
 let sort_type='';
 
+let addmore = false;
 
 let add_elements = ()=>{
- 
+  addmore=true;
   if(all_pro.value.length-pro.value.length<9){
 if(pro.value.length!==all_pro.value.length){
   pro.value=pro.value.concat(all_pro.value.slice(pro.value.length,all_pro.value.length));
@@ -576,24 +577,29 @@ let checkt = type=>{
   switch(type){
 
 case 'reco':
- pro.value.sort((a,b)=> b.reco-a.reco)
+ all_pro.value.sort((a,b)=> b.reco-a.reco);
+ pro.value=all_pro.value.slice(0,pro.value.length);
   break;
 
 case 'rating':
- pro.value.sort((a,b)=> b.rating-a.rating)
-  break;
+ all_pro.value.sort((a,b)=> b.rating-a.rating);
+ pro.value=all_pro.value.slice(0,pro.value.length);
+   break;
 
 case 'date':
- pro.value.sort((a,b)=> b.date-a.date)
+ all_pro.value.sort((a,b)=> b.date-a.date);
+ pro.value=all_pro.value.slice(0,pro.value.length); 
   break;
 
 case 'low':
-  pro.value.sort((a,b)=> a.price-b.price)
-  window.scrollTo(0, 0);
+all_pro.value.sort((a,b)=> a.price-b.price);
+ pro.value=all_pro.value.slice(0,pro.value.length); 
   break;
 
 case 'hight':
-  pro.value.sort((a,b)=> b.price-a.price)
+all_pro.value.sort((a,b)=> b.price-a.price);
+ pro.value=all_pro.value.slice(0,pro.value.length); 
+  
   break;
 
 
@@ -601,6 +607,9 @@ default:
   break;
 
 }
+if(!addmore)
+window.scrollTo(0, 0);
+addmore=false;
 }
 
 
@@ -1077,21 +1086,17 @@ let dis_rating = (rating)=>{
               <div class="flex-grow-1 sec-flex d-flex ">
                 <label class="flex-item nav-link" @click="tech">tech</label>
                 <label class="flex-item nav-link" @click="fashion">fashion</label>
-                <label class="flex-item nav-link" @click="frun">somthing</label>
+                <label class="flex-item nav-link" @click="frun">frun</label>
             </div>
  
             
 
-            <button v-if="token!=null" type="button" :class="button+` button1`" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button  type="button" :class="button+` button1`" data-bs-toggle="modal" data-bs-target="#exampleModal">
               <ion-icon name="cart-outline" class="cart-icon"></ion-icon> 
               <label v-if="count>0" class="count-label">{{count}}</label>
               </button>
 
-              <button v-if="token==null" type="button" :class="button+` button1 `">
-              <router-link to="/login" :class="`login_butt_main login_butt_main`+all">
-               login
-              </router-link>
-            </button>
+            
               <button v-if="!dark" class="theme-button theme-button1" @click="change_dark" ><ion-icon name="moon" class="moon"></ion-icon></button>
               <button v-if="dark" class="theme-button theme-button2" @click="change_light" ><ion-icon name="sunny" class="sun"></ion-icon></button>  
               
@@ -1123,7 +1128,9 @@ let dis_rating = (rating)=>{
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="submit-pur " data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="can-pur">{{total}}$</button>
+                      <button type="button" data-bs-dismiss="modal" class="can-pur">{{total}}$  <router-link to="/login" :class="`login_butt_main login_butt_main`+all">
+                        login
+                       </router-link></button>
                     </div>
                   </div>
                 </div>
@@ -1144,16 +1151,12 @@ let dis_rating = (rating)=>{
             <div :class="`main-flex2 d-flex justify-content-between main-flex2-`+all">
 
               
-              <button  v-if="!token===null" type="button" :class="button+` button1`" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              <button  type="button" :class="button+` button1`" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <ion-icon  name="cart-outline" class="cart-icon"></ion-icon>
                 <label v-if="count>0" class="count-label">{{count}}</label>
                 </button>
 
-                <button v-if="token==null" type="button" :class="button+` button2-min `">
-                  <router-link to="/login" :class="`login_butt_main login_butt_main`+all">
-                   login
-                  </router-link>
-                </button>
+           
 
               <label  @click="tech" :class="button+` button1 button2`"  >
                 <label class="logo_main">
@@ -1326,7 +1329,9 @@ let dis_rating = (rating)=>{
                   <div>  
                     <label class="modal-text">price for each: {{item.price}}  </label><br> 
                     <label class="modal-text">total count: {{item.count}} </label> <br>
-                    <label class="modal-text">total price: {{item.count*item.price}} </label>
+                    <label class="modal-text">total price: {{item.count*item.price}}
+                    
+                       </label>
                   </div>
                   <button @click="removei(item)" class="remove-but">remove</button>
                 </div>
@@ -1335,7 +1340,9 @@ let dis_rating = (rating)=>{
 
             <div class="modal-footer">
               <button type="button" class="submit-pur " data-bs-dismiss="modal">Close</button>
-              <button type="button" class="can-pur">{{total}}$</button>
+              <button type="button" data-bs-dismiss="modal" class="can-pur">{{total}}$  <router-link to="/login" :class="`login_butt_main login_butt_main`+all">
+                login
+               </router-link></button>
             </div>
 
           </div>
