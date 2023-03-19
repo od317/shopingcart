@@ -520,11 +520,7 @@ let count = computed(()=>{
 
 const addi = (item)=>{
 
-  if(token.value===null){
-    router.push('/login');
-    console.log('shaker');
-    return;
-  }
+
 
     i++;
     let done =false;
@@ -1310,7 +1306,7 @@ let dis_rating = (rating)=>{
     </div>
 
       
-      <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog " >
           <div :class="`modal-content  modal_`+all">
             <div class="modal-header">
@@ -1319,7 +1315,7 @@ let dis_rating = (rating)=>{
             </div>
 
             <div class="modal-body">
-              <div v-if="cart.length===0">No items selected</div>
+              <div style="color:white" v-if="cart.length===0">No items selected</div>
               <div v-for="item in cart">
                 <div class="modal-item-text modal-text">{{item.name}}</div>
                 <div class="modal-flex d-flex justify-content-evenly ">

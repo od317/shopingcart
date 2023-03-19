@@ -560,8 +560,9 @@ let change_grid = type => {
     <img :src="img.src" alt="">
     <div  class="max d-flex flex-column card_hov">
      <label class="" for="">see more in {{img.type}}</label>  
-     <button>go to sotre</button>
-    </div> 
+     <button v-if="img.type=='fashion'" @click="fashion">go to sotre</button>
+      <button v-else-if="img.type=='tech'" @click="tech">go to sotre</button>
+      <button v-else @click="furn">go to sotre</button>    </div> 
    </div>
    
 
@@ -577,7 +578,10 @@ let change_grid = type => {
     <img :src="img.src" alt="">
     <div  class="max d-flex flex-column card_hov">
       <label class="" for="">see more in {{img.type}}</label>  
-      <button>go to sotre</button>
+      <button v-if="img.type=='fashion'" @click="fashion">go to sotre</button>
+      <button v-else-if="img.type=='tech'" @click="tech">go to sotre</button>
+      <button v-else @click="furn">go to sotre</button>
+
      </div> 
    </div>
 
@@ -594,8 +598,9 @@ let change_grid = type => {
     <img :src="img.src" alt="">
     <div  class="d-flex flex-column card_hov">
       <label class="" for="">see more in {{img.type}}</label>  
-      <button>go to sotre</button>
-     </div> 
+      <button v-if="img.type=='fashion'" @click="fashion">go to sotre</button>
+      <button v-else-if="img.type=='tech'" @click="tech">go to sotre</button>
+      <button v-else @click="furn">go to sotre</button>     </div> 
    </div>
 
 
@@ -614,8 +619,9 @@ let change_grid = type => {
     <img :src="img.src" alt="">
     <div  class="d-flex flex-column card_hov">
      <label class="" for="">see more in {{img.type}}</label>  
-     <button>go to sotre</button>
-    </div> 
+     <button v-if="img.type=='fashion'" @click="fashion">go to sotre</button>
+      <button v-else-if="img.type=='tech'" @click="tech">go to sotre</button>
+      <button v-else @click="furn">go to sotre</button>    </div> 
    </div>
 
 

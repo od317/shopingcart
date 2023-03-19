@@ -168,6 +168,7 @@ main{
     display:flex;
     flex-direction:row;
     justify-content: center;
+    overflow-y:hidden;
     height: 100vh;
     color:#FFF;
     font-family: 'Andale' 'Mono', monospace	;
